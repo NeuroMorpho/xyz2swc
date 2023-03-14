@@ -1,0 +1,11 @@
+pythran == 0.11.0
+cython == 0.29.32
+numpy == 1.19.5
+pandas == 1.1.5
+uvicorn == 0.17.0
+fastapi == 0.75.2
+python-multipart == 0.0.5
+pyimagej == 1.2.1
+lxml == 4.8.0
+itsdangerous == 2.1.2
+morph-tool[all] == 2.9.1
