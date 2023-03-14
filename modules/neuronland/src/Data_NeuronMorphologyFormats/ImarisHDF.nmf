@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<morphologyFormat>
+
+	<name>NeurolucidaClassic</name>
+
+	<description>Description - TODO</description>
+
+	<origin>
+		<software>unknown</software>
+		<dataSource>algorithm</dataSource>
+	</origin>
+
+	<fileExtensions>
+		<extension>txt</extension>
+		<extension>seg</extension>
+	</fileExtensions>
+
+	<dataFileFormat>
+		<encoding>ascii</encoding>
+		<endOfLineType>CRLF</endOfLineType>
+	</dataFileFormat>
+
+	<morphologySupport>
+
+		<somaType>point</somaType>
+		<axonType>unsupported</axonType>
+		<dendriteType>multiple</dendriteType>
+
+		<representation>3D</representation>
+
+		<cellProperties>
+			<markers>no</markers>
+		</cellProperties>
+
+		<somaProperties>
+			<markers>no</markers>
+		</somaProperties>
+
+		<treeProperties>
+			<peerlessRoot>yes</peerlessRoot>
+			<branchingLimit>binary</branchingLimit>
+			<explicitBranchConnectivity>no</explicitBranchConnectivity>
+			<repeatedBranchPointSample>no</repeatedBranchPointSample>
+			<branchOrderLimit>no</branchOrderLimit>
+			<markers>no</markers>
+		</treeProperties>
+
+		<sampleUnits>
+			<position>microns</position>
+			<diameter>microns</diameter>
+		</sampleUnits>
+
+	</morphologySupport>
+
+	<visualisationSupport>
+		<markerColours>no</markerColours>
+		<branchColours>no</branchColours>
+	</visualisationSupport>
+
+</morphologyFormat>
+

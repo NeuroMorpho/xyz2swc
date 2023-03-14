@@ -1,0 +1,13 @@
+#ifndef SCRIPTREGISTRATIONPYTHON_HPP_
+#define SCRIPTREGISTRATIONPYTHON_HPP_
+
+/** 
+
+
+
+**/
+
+void AddScriptRegistrationAPIToPython();
+
+
+#endif // SCRIPTREGISTRATIONPYTHON_HPP_

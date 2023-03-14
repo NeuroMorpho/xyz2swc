@@ -1,0 +1,8 @@
+#ifndef MORPHOLOGYBUILDERPYTHON_HPP_
+#define MORPHOLOGYBUILDERPYTHON_HPP_
+
+
+void AddMorphologyBuilderAPIToPython();
+
+
+#endif // MORPHOLOGYBUILDERPYTHON_HPP_

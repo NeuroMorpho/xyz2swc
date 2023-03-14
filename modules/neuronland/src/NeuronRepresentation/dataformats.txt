@@ -1,0 +1,394 @@
+
+
+Currently supported datafile:
+
+
+
+
+Notes:
+
+burke-style Child-over-peer format
+
+/*
+ *  R E Burke (priv. com.) writes :-
+ *
+ * "Each line in the file is a compartment.  The header gives 5 integers,
+ * labeled dendrite, order, branch, segment, and type, that makes the "name"
+ * for each compartment/segment in the tree.  The naming convention is based
+ * on a simple binary structure, where the stem branch is order = 0, branch =
+ * 1.  Subsequent branches are named by incrementing "order" by 1 at
+ * successive branch points.  The branch number for daughter branches at any
+ * branch point is calculated from the branch number of the parent, according
+ * to:
+ * 
+ * daughter 1 (odd) number = (parent branch number * 2) - 1
+ * daughter 2 (even) number = (parent branch number * 2) 
+ * 
+ * This is explained in our paper in J. Comp. Neurol. 255:68-81, 1987m
+ * although I am sure it will be perfectly obvious to you.  Successive pieces
+ * ("segments") of a given branch are number (sic) sequentially in the distal
+ * direction.  The "type" denotes the terminating condition of any segment: 1
+ * = continues without branching; 2 = branches into two daughters; 3 =
+ * terminates.  The scheme provides an unambiguous name for every branch and
+ * segment and the complete topology of the tree can be obtained simply from
+ * the list of terminating branch names.  The length and diameter dimensions
+ * of compartments are in micrometers."
+ *
+ */
+ 
+
+
+Amaral format
+
+/*
+ * Structure of the Data Files
+ *
+ * Important 
+ * Please Read before Using the Data Files
+ * I. CAVEAT: Diameter Measurements.
+ * The data files were generated using a computer-microscope system (see below for 
+ * references). The microscope was a Nikon Optiphot equipped with a x63 
+ * oil-immersion Zeiss objective. This lens provided excellent resolution of filled 
+ * dendritic processes. However, it was often difficult to accurately measure the 
+ * diameters of the finer dendrites in the thick tissue slices, particularly when 
+ * the dendrites were covered with spines. In addition, because of the resolution 
+ * of the computer monitor, the settings of the cursor used to measure dendritic 
+ * diameters were limited. Thus, the diameter measurements given in the files here 
+ * are overestimates. 
+ * We have not used diameter measurements in any of our published work, and we 
+ * recommend that you consider them to be inaccurate. In contrast, the length 
+ * measurements of dendritic segments are accurate to within a micron over a linear 
+ * distance of at least 400 um. 
+ * II. Origin of data
+ * These data files were generated using a computer-microscope system designed by 
+ * Drs. John Miller and Rocky Nevin (G.A. Jacobs and R.H.W. Nevin, 1991, Anatomical 
+ * Record, 231:563), and used in the Claiborne lab for digitizing hippocampal 
+ * neurons directly from thick slices of tissue (B.J. Claiborne, 1992, in Methods 
+ *in Neurosciences, Vol. 10: Computers and Computations in the Neurosciences; ed: 
+ * P.M. Conn; and, L.A. Rihn and B.J. Claiborne, 1990, Dev. Brain Res. 54:115). The 
+ *system design is similar to that of the Neurolucida system made by 
+ * Microbrightfield. 
+ * The neurons were intracellularly injected with horseradish peroxidase and 
+ * histological procedures were followed to ensure a dense reaction product in the 
+ * filled dendrites (B.J. Claiborne, D.G. Amaral, and M.W. Cowan, 1990, J. Comp. 
+ * Neurol. 302:206; and, L.A. Rihn and B.J. Claiborne, 1990, Dev. Brain Res. 
+ * 54:115). Slices were cleared in glycerol, and shrinkage was minimal. Neurons 
+ * were digitized directly from the thick slices. Except for the locations of the 
+ * large spines called thorny excrescences on the CA3 pyramidal neurons (see Point 
+ * type F below), the locations of spines on the dendrites were not encoded. 
+ * III. Structure of the Data Files
+ *   Comments section of file
+ * The data files are often headed by comments contained within a "C" comment 
+ * delimiter set as below:
+ * /* 
+ * COMMENTS
+ * */
+ * These comments can be stripped off, and the data below then read.
+ * B. Data file format
+ * The data below the comment delimiters is formatted as in the following example:
+ * Line_Number Point_Type X Y Z Diameter
+ * 1 S 0.00 0.00 0.00 5.25
+ *1. Line_Number and Cell Connectivity
+ * Connectivity of the cell is read line by line in descending order in the file – 
+ *it is NOT read by the Line_Number above. (Line_Number is an internal number used 
+ * by the system.)
+ * 2. Point_Type and Cell Morphology
+ * The Point_Type denotes the morphological structure defined by the point.
+ * S = Soma point. Denotes a point that is part of the outline of the cell body. 
+ * P = Primary dendrite point. Denotes the beginning of a primary dendrite as it 
+ * exits the soma.
+ * C = Continuation point (most common point). Denotes a point along a dendrite.
+ * B = Branch point. Denotes a bifurcation. 
+ * T = Termination point. Denotes 1) the end of a dendritic process (one node of 
+ * the most recent bifurcation point), or 2) the end of the soma - when the ‘T’ 
+ * follows a Soma point or a Primary dendrite point and is the first ‘T’ in the 
+ * file.
+ * F= Thorny excrescence on a CA3 pyramidal neuron. This point may be treated as a 
+ * ‘C’.
+ * In general, the most recent branch point ‘B’ or primary dendrite ‘P’ is 
+ * connected to the points that are closest to it in the file. So if a branch point 
+ * ‘B’ is encountered in descending order in the file, the following continuation 
+ * points are connected to one node of this branch point. A termination "T" later 
+ * in the file closes this node. Points (‘C’ or ‘B’) that continue after that ‘T’ 
+ * fill the second node. A termination ‘T’ after this point closes the second node 
+ * of the branch point and points after this ‘T’ fill the second node of the second 
+ *closest branch point in the file, etc…. When both nodes of the last branch ‘B’ 
+ * are filled, any following terminations ‘T’ denote the end of the primary apical 
+ *that gave rise to them. Any further points are attached to the second closest 
+ * primary ‘P’ point in the file, or, if there are no more primaries to terminate, 
+ * the ‘T’ denotes the end of the tree altogether. 
+ * X= Denotes the X coordinate of the point.
+ * Y= Denotes the Y coordinate of the point.
+ * Z= Denotes the Z coordinate of the point.
+ * Diameter: Denotes the diameter of process at that point. Note that this 
+ * measurement is not accurate – see above. 
+ *   
+ * The link below will take you to the data files that were used in the following 
+ * paper:
+ * Comparative Electrotonic Analysis of Three Classes of Rat Hippocampal Neurons
+ * Nicholas T. Carnevale, Kenneth Y. Tsai, Brenda J. Claiborne, and Thomas H. Brown
+ * The Journal of Neurophysiology,1997 August, 78(2):703-720 
+ * RAW DATA 
+ * (CA3)
+ *   
+ */
+
+
+
+Eutectics Format: (from ntscable.doc, documentation with ntscable by JC Wathey)
+
+
+/*
+INPUT FILE SYNTAX
+
+ntscable determines the syntax of the input file by searching for
+a standard "header" line near the beginning of the file.  Each
+digitizing system uses a unique header line, as listed in the file
+read.c.  If the program cannot find any of these in the input
+file, it gives an error message and aborts.
+
+I. Eutectic NTS syntax
+
+NTS was designed for use with serial sections of stained neurons.
+Portions of neurites are traced from each section, and the whole
+neuron is reconstructed by aligning the data from adjacent sections.
+This process of alignment is called "merging" in the NTS manual.
+Your morphological data must be completely merged before you try to
+translate it with ntscable.  In our lab we have only used data from
+wholemounts of hippocampal slices (prepared and digitized by David
+Amaral and colleagues).  Normally the entire neuron is contained
+within the slice, so merging data from serial sections is unnecessary.
+
+NTS stores 3 spatial coordinates (x,y,z) and a thickness value
+(i.e., neurite diameter) for each digitized data point.  It also 
+categorizes each data point as belonging to one of 21 different 
+"point types".  You should consult the NTS manual for a detailed 
+explanation, but the point types are listed and briefly described 
+below:
+
+
+MTO	middle tree origin
+TTO	top tree origin
+BTO	bottom tree origin
+
+CP	continuation point
+FS	fiber swelling
+SB	spine base
+BP	branch point
+
+NE	natural end
+ES	end swelling
+MAE	middle artificial end
+TAE	top artificial end
+BAE	bottom artificial end
+
+SOS	soma outline start
+SCP	soma continuation point
+SOE	soma outline end
+
+OS	outline start
+OCP	outline continuation point
+OE	outline end
+
+DS	dot start
+DCP	dot continuation point
+DE	dot end
+
+Points of type SOS, SCP and SOE define the traced outline of the
+cell body.  The root of a primary neurite (i.e., one that is 
+attached to the soma) is identified by MTO.  Most points along the
+length of the neurite are of type CP; FS and SB are essentially the
+same as CP, but also specify the location of a varicosity or spine,
+respectively.  A bifurcation of the neurite is indicated by BP; a
+split into 3 or more branches from the same point can be indicated
+by 2 or more successive points of type BP, all with the same x, y
+and z coordinates.  The normal end of a fiber is indicated by NE
+or, if it ends in a presynaptic bouton, by ES.  If the fiber cannot
+be traced to its end because of artifacts, incomplete filling, or
+because it is severed at one face of the section, then the end is
+indicated by MAE, TAE or BAE.  TTO and BTO indicate the beginning
+of a severed neurite at the top or bottom face of the section,
+respectively; a fully merged neuron will not contain points of
+these types.  Points of type OS, OCP, OE, DS, DCP, and DE are used
+to digitize histological features other than the neuron (laminar
+boundaries, locations of other nearby cell bodies, etc.).
+
+An NTS data file lists each point as a separate line of text, 
+including a point number, point type, coordinates and thickness 
+(diameter).   See example.nts for a simplified example of such a 
+file.  When ntscable reads the file, it first skips over any lines 
+which do not match the standard header line.  This allows you 
+to insert any number of comment lines at the top of the file.  Any
+such comments will be included as part of the automatically 
+generated comment at the top of the translated file.  
+
+Brief comments may also be appended to the end of a data line, as 
+shown in example.nts, but these will not appear in the translated
+file.
+
+The current version of ntscable does not recognize points of type 
+TTO and BTO.  If your file contains these, it means your data are 
+not fully merged.  You must complete the merger before translation.  
+Points of type OS, OCP, OE, DS, DCP, and DE are not part of the 
+neuron; ntscable ignores these.  Points of type FS and SB are treated 
+the same as CP.  Similarly, ES is treated exactly the same as NE.
+I have plans for a future version of ntscable which will construct 
+"prefab" spines at every SB point, but for the present spines must 
+be added manually after translation.  
+
+If the file was constructed by merging several files from serial
+sections, then it may contain multiple separate tracings of the 
+soma (one for each section that contained part of the soma).  If
+this is the case, ntscable will use only the largest soma outline 
+(i.e., the one that encloses the largest area) for calculating 
+the length and diameter of the soma.  The details of this
+calculation are explained under TRANSLATION ALGORITHM, below.
+
+
+II. Nevin syntax
+
+The Nevin syntax (originated in John Miller's lab at UC Berkeley)
+differs from the Eutectic syntax in two respects: (1) it uses fewer 
+point types, and (2) the soma is digitizing not by tracing its
+outline but instead by digitizing it as a "branch".
+
+Nevin point types			Eutectic equivalent
+-------------------------------		-------------------
+C	continuation point			CP
+S	soma continuation point			CP
+B	branch point				BP
+T	termination point			NE
+F	fiducial point			DS,OS,DCP,OCP,DE,OE
+f	fiducial point			DS,OS,DCP,OCP,DE,OE
+c	fiducial point			DS,OS,DCP,OCP,DE,OE
+
+(In some versions of this translation, a branch originating
+from the soma is digitized as P, therefore I added the P point
+type.  P is treated exactly as a B.
+
+P       soma branch point                       BP
+)-ZFM
+
+The soma is digitized by moving the cursor along one arbitrarily
+chosen direction through the center of the soma and storing the
+diameter (measured perpendicular to the direction of cursor
+movement) at frequent intervals.  This is identical to the
+procedure used to digitize a dendritic branch, except that the
+points are tagged with point type 'S', rather than 'C'.
+
+The Nevin files I have seen are of unipolar invertebrate neurons.
+In most of them the file begins with the soma points, and the 
+single primary neurite then starts with a point of type 'C'.  In
+such cases the soma was digitized along a line that ends at the
+root of the primary neurite.  Alternatively, the file may begin 
+with the neurites and end with the soma points.  In yet another 
+style the soma is digitized along a line that does not end at the 
+root of the neurite.  Instead, the root of the neurite is 
+indicated as a point of type 'B' in the middle of the list of 
+'S' points, which is terminated with a point of type 'T'.
+ntscable will correctly translate files organized in any of 
+these ways.  See TRANSLATION ALGORITHM, below, for an
+explanation of how the soma length and diameter are calculated
+from the list of soma points.
+
+The fiducial points are analogous to Eutectic "dot" and "outline"
+points and are ignored by ntscable.  The lower case 'f' and 'c'
+points sometimes (but not always) occur at the beginning and end,
+respectively, of a list of 'F' points.  It appears that sometimes
+a lowercase 'f' point is in reality a neurite point (judging from
+the particular values of x, y, z and diameter).  I recommend
+checking these points carefully before translation.  If any of
+them was meant to be a data point, its point type must be changed
+before translation.
+
+III. Douglas syntax
+
+Rodney Douglas' digitizing system produces data files in two 
+different formats, called "2D" and "3D".  The 3D file contains a
+complete, 3-dimensional representation of the neuron.
+The 2D file is derived from the 3D file and contains only branch
+length, diameter and connectivity information.  If both file
+types are available for a given cell, then the 3D file is
+preferable.  ntscable is, however, capable of translating both 
+formats.
+
+Douglas 3D syntax
+
+The Douglas 3D format is similar to the Eutectic format, with a 
+point type identifier and an x, y, z and diameter value for each 
+digitized point.  
+
+Douglas 3D point types			Eutectic equivalent
+-------------------------------		-------------------
+mto	middle tree origin			MTO
+
+dcp	continuation point			CP
+bp	branch point				BP
+
+ne	natural end				NE
+mae	middle artificial end			MAE
+tae	top artificial end			TAE
+bae	bottom artificial end			BAE
+
+mto	soma outline start			SOS
+scp	soma continuation point			SCP
+mae	soma outline end			SOE
+
+Note that mto is used both for the origin of a neurite and for
+the beginning of the list of soma outline points; similarly
+mae is used both for an "artificial" end of a neurite branch and
+for the end of the list of soma points.  The exact meaning of 
+mto and mae is determined from the context in which they
+occur.  The coordinates and diameters in the Douglas 3D files
+are in units of microns * 10 (i.e., the numbers in the file must
+be divided by 10 to yield microns).
+
+Douglas 2D syntax
+
+The 2D file is evidently derived from the 3D file by a 
+translation program and is a reduced version of the 3D file.  
+Rather than containing a complete list of all digitized points, 2D
+files contain only one point for each segment of neurite between
+adjacent branch points.  For each of these points there is a point
+type identifier and a segment length and diameter.  The diameter
+is the average of all the original digitized diameters which lay
+within the segment.  The length is the sum of the distances between
+adjacent points that lay within the segment.  Since there is only
+one point for each interval between branch points, there is no
+need for continuation points.  The soma is listed as a single
+point with a corresponding length and diameter.  There are no x,
+y, or z coordinates in the file.  The point types in the 2D Douglas 
+syntax are:
+
+Douglas 2D point types			Eutectic equivalent
+-------------------------------		-------------------
+som	soma				   SOS, SCP, SOE
+bp	branch point				BP
+ne	natural end				NE
+mae	middle artificial end			MAE
+tae	top artificial end			TAE
+bae	bottom artificial end			BAE
+
+
+As with Eutectic files, short comments may be appended to the
+end of a line in a Douglas 2D file.  When adding such comments to
+a Douglas 2D file, be sure there is at least one space character 
+between the original end of the line and the beginning of the 
+comment.  
+
+When ntscable translates a Douglas 2D file, it synthesizes lists 
+of x, y, and z coordinates for the soma and dendrites.  The x 
+coordinates are calculated by summing the appropriate segment 
+lengths.  The y coordinate is constant for all segments in a 
+given branch, but differs from one branch to the next.  The z 
+coordinates are all 0.  The synthesized coordinates are used for 
+the lists of 3D points in the translation to NEURON syntax.  If 
+the neuron were drawn using these coordinates, the resulting 
+picture would be essentially the same as the schematic diagram 
+produce by ntscable (see SCHEMATIC DIAGRAMS, below).
+
+
+
+*/
+
+

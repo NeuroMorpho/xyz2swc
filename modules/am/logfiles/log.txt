@@ -1,0 +1,10 @@
+Warning messages:
+1: In match.fun(ffs$read)(f, ...) :
+  No width data for neuron:../input/to_convert/neuron_AmriaMesh_AM.am
+2: In as.seglist.igraph(masterg <- x, origin = origin, Verbose = Verbose) :
+  Multiple origins found! Using first origin.
+3: In graph.dfs(x, root = origin, father = TRUE, neimode = "all") :
+  Argument `neimode' is deprecated; use `mode' instead
+Warning message:
+In igraph::dfs(g, root = x$StartPoint, neimode = "all") :
+  Argument `neimode' is deprecated; use `mode' instead

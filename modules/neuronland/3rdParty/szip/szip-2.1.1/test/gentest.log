@@ -1,0 +1,2203 @@
+Seed = 1647225806
+test(odd): mode=nn msb_first=0 n=08, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 3232) = 0
+test(odd): mode=nn msb_first=0 n=16, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 6464) = 0
+test(odd): mode=nn msb_first=0 n=24, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 12928) = 0
+test(odd): mode=nn msb_first=1 n=08, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 3232) = 0
+test(odd): mode=nn msb_first=1 n=16, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 6464) = 0
+test(odd): mode=nn msb_first=1 n=24, j=08 s=101 -------------------
+memcmp(image_in, image_in2, 12928) = 0
+test: mode=nn n=32, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn n=64, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=04, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=0 n=05, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=0 n=06, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=0 n=07, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=0 n=08, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=0 n=09, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=10, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=11, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=12, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=13, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=14, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=15, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=16, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=17, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=18, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=19, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=20, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=21, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=22, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=23, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=24, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=04, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=0 n=05, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=0 n=06, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=0 n=07, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=0 n=08, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=0 n=09, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=10, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=11, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=12, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=13, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=14, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=15, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=16, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=17, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=18, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=19, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=20, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=21, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=22, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=23, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=24, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=04, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=0 n=05, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=0 n=06, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=0 n=07, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=0 n=08, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=0 n=09, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=10, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=11, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=12, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=13, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=14, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=15, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=16, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=17, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=18, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=19, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=20, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=21, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=22, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=23, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=24, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=04, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=0 n=05, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=0 n=06, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=0 n=07, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=0 n=08, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=0 n=09, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=10, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=11, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=12, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=13, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=14, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=15, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=16, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=17, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=18, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=19, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=20, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=21, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=22, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=23, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=24, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=04, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=05, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=06, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=07, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=08, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=0 n=09, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=10, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=11, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=12, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=13, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=14, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=15, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=16, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=17, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=18, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=19, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=20, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=21, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=22, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=23, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=24, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=04, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=0 n=05, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=0 n=06, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=0 n=07, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=0 n=08, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=0 n=09, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=10, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=11, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=12, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=13, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=14, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=15, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=16, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=0 n=17, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=18, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=19, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=20, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=21, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=22, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=23, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=24, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=0 n=04, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=05, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=06, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=07, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=08, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=0 n=09, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=10, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=11, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=12, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=13, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=14, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=15, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=16, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=0 n=17, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=18, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=19, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=20, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=21, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=22, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=23, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=24, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=0 n=04, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=0 n=05, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=0 n=06, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=0 n=07, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=0 n=08, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=0 n=09, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=10, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=11, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=12, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=13, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=14, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=15, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=16, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=0 n=17, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=18, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=19, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=20, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=21, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=22, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=23, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=24, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=0 n=04, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=05, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=06, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=07, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=08, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=0 n=09, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=10, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=11, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=12, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=13, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=14, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=15, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=16, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=0 n=17, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=18, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=19, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=20, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=21, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=22, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=23, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=24, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=0 n=04, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=0 n=05, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=0 n=06, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=0 n=07, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=0 n=08, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=0 n=09, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=10, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=11, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=12, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=13, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=14, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=15, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=16, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=0 n=17, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=18, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=19, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=20, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=21, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=22, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=23, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=24, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=0 n=04, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=05, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=06, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=07, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=08, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=0 n=09, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=10, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=11, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=12, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=13, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=14, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=15, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=16, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=0 n=17, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=18, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=19, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=20, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=21, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=22, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=23, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=24, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=0 n=04, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=0 n=05, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=0 n=06, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=0 n=07, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=0 n=08, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=0 n=09, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=10, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=11, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=12, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=13, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=14, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=15, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=16, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=0 n=17, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=18, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=19, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=20, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=21, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=22, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=23, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=24, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=0 n=04, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=05, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=06, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=07, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=08, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=0 n=09, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=10, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=11, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=12, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=13, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=14, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=15, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=16, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=0 n=17, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=18, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=19, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=20, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=21, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=22, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=23, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=0 n=24, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=04, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=1 n=05, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=1 n=06, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=1 n=07, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=1 n=08, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=ec msb_first=1 n=09, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=10, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=11, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=12, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=13, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=14, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=15, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=16, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=17, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=18, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=19, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=20, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=21, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=22, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=23, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=24, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=04, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=1 n=05, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=1 n=06, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=1 n=07, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=1 n=08, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=ec msb_first=1 n=09, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=10, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=11, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=12, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=13, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=14, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=15, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=16, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=17, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=18, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=19, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=20, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=21, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=22, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=23, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=24, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=04, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=1 n=05, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=1 n=06, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=1 n=07, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=1 n=08, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=ec msb_first=1 n=09, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=10, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=11, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=12, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=13, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=14, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=15, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=16, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=17, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=18, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=19, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=20, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=21, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=22, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=23, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=24, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=04, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=1 n=05, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=1 n=06, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=1 n=07, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=1 n=08, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=ec msb_first=1 n=09, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=10, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=11, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=12, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=13, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=14, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=15, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=16, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=17, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=18, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=19, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=20, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=21, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=22, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=23, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=24, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=04, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=05, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=06, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=07, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=08, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=ec msb_first=1 n=09, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=10, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=11, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=12, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=13, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=14, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=15, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=16, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=17, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=18, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=19, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=20, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=21, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=22, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=23, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=24, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=04, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=1 n=05, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=1 n=06, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=1 n=07, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=1 n=08, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=ec msb_first=1 n=09, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=10, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=11, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=12, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=13, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=14, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=15, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=16, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=ec msb_first=1 n=17, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=18, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=19, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=20, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=21, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=22, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=23, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=24, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=ec msb_first=1 n=04, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=05, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=06, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=07, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=08, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=ec msb_first=1 n=09, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=10, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=11, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=12, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=13, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=14, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=15, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=16, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=ec msb_first=1 n=17, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=18, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=19, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=20, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=21, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=22, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=23, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=24, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=ec msb_first=1 n=04, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=1 n=05, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=1 n=06, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=1 n=07, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=1 n=08, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=ec msb_first=1 n=09, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=10, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=11, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=12, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=13, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=14, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=15, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=16, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=ec msb_first=1 n=17, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=18, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=19, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=20, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=21, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=22, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=23, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=24, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=ec msb_first=1 n=04, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=05, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=06, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=07, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=08, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=ec msb_first=1 n=09, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=10, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=11, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=12, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=13, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=14, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=15, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=16, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=ec msb_first=1 n=17, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=18, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=19, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=20, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=21, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=22, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=23, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=24, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=ec msb_first=1 n=04, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=1 n=05, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=1 n=06, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=1 n=07, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=1 n=08, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=ec msb_first=1 n=09, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=10, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=11, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=12, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=13, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=14, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=15, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=16, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=ec msb_first=1 n=17, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=18, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=19, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=20, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=21, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=22, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=23, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=24, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=ec msb_first=1 n=04, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=05, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=06, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=07, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=08, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=ec msb_first=1 n=09, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=10, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=11, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=12, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=13, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=14, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=15, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=16, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=ec msb_first=1 n=17, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=18, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=19, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=20, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=21, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=22, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=23, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=24, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=ec msb_first=1 n=04, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=1 n=05, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=1 n=06, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=1 n=07, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=1 n=08, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=ec msb_first=1 n=09, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=10, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=11, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=12, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=13, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=14, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=15, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=16, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=ec msb_first=1 n=17, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=18, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=19, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=20, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=21, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=22, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=23, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=24, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=ec msb_first=1 n=04, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=05, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=06, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=07, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=08, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=ec msb_first=1 n=09, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=10, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=11, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=12, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=13, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=14, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=15, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=16, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=ec msb_first=1 n=17, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=18, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=19, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=20, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=21, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=22, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=23, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=ec msb_first=1 n=24, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=04, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=0 n=05, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=0 n=06, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=0 n=07, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=0 n=08, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=0 n=09, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=10, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=11, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=12, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=13, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=14, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=15, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=16, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=17, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=18, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=19, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=20, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=21, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=22, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=23, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=24, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=04, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=0 n=05, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=0 n=06, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=0 n=07, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=0 n=08, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=0 n=09, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=10, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=11, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=12, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=13, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=14, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=15, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=16, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=17, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=18, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=19, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=20, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=21, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=22, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=23, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=24, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=04, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=0 n=05, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=0 n=06, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=0 n=07, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=0 n=08, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=0 n=09, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=10, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=11, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=12, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=13, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=14, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=15, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=16, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=17, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=18, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=19, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=20, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=21, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=22, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=23, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=24, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=04, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=0 n=05, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=0 n=06, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=0 n=07, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=0 n=08, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=0 n=09, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=10, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=11, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=12, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=13, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=14, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=15, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=16, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=17, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=18, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=19, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=20, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=21, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=22, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=23, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=24, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=04, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=05, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=06, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=07, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=08, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=0 n=09, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=10, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=11, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=12, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=13, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=14, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=15, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=16, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=17, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=18, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=19, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=20, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=21, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=22, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=23, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=24, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=04, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=0 n=05, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=0 n=06, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=0 n=07, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=0 n=08, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=0 n=09, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=10, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=11, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=12, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=13, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=14, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=15, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=16, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=0 n=17, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=18, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=19, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=20, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=21, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=22, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=23, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=24, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=0 n=04, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=05, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=06, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=07, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=08, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=0 n=09, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=10, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=11, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=12, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=13, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=14, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=15, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=16, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=0 n=17, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=18, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=19, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=20, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=21, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=22, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=23, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=24, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=0 n=04, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=0 n=05, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=0 n=06, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=0 n=07, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=0 n=08, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=0 n=09, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=10, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=11, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=12, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=13, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=14, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=15, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=16, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=0 n=17, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=18, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=19, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=20, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=21, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=22, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=23, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=24, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=0 n=04, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=05, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=06, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=07, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=08, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=0 n=09, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=10, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=11, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=12, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=13, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=14, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=15, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=16, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=0 n=17, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=18, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=19, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=20, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=21, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=22, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=23, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=24, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=0 n=04, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=0 n=05, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=0 n=06, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=0 n=07, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=0 n=08, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=0 n=09, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=10, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=11, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=12, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=13, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=14, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=15, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=16, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=0 n=17, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=18, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=19, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=20, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=21, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=22, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=23, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=24, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=0 n=04, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=05, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=06, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=07, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=08, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=0 n=09, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=10, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=11, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=12, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=13, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=14, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=15, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=16, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=0 n=17, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=18, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=19, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=20, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=21, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=22, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=23, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=24, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=0 n=04, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=0 n=05, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=0 n=06, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=0 n=07, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=0 n=08, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=0 n=09, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=10, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=11, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=12, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=13, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=14, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=15, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=16, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=0 n=17, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=18, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=19, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=20, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=21, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=22, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=23, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=24, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=0 n=04, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=05, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=06, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=07, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=08, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=0 n=09, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=10, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=11, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=12, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=13, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=14, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=15, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=16, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=0 n=17, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=18, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=19, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=20, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=21, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=22, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=23, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=0 n=24, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=04, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=1 n=05, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=1 n=06, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=1 n=07, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=1 n=08, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 8192) = 0
+test: mode=nn msb_first=1 n=09, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=10, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=11, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=12, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=13, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=14, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=15, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=16, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=17, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=18, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=19, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=20, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=21, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=22, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=23, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=24, j=08, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=04, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=1 n=05, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=1 n=06, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=1 n=07, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=1 n=08, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 10240) = 0
+test: mode=nn msb_first=1 n=09, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=10, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=11, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=12, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=13, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=14, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=15, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=16, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=17, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=18, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=19, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=20, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=21, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=22, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=23, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=24, j=10, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=04, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=1 n=05, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=1 n=06, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=1 n=07, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=1 n=08, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 12288) = 0
+test: mode=nn msb_first=1 n=09, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=10, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=11, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=12, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=13, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=14, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=15, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=16, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=17, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=18, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=19, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=20, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=21, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=22, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=23, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=24, j=12, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=04, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=1 n=05, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=1 n=06, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=1 n=07, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=1 n=08, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 14336) = 0
+test: mode=nn msb_first=1 n=09, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=10, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=11, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=12, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=13, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=14, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=15, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=16, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=17, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=18, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=19, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=20, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=21, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=22, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=23, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=24, j=14, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=04, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=05, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=06, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=07, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=08, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 16384) = 0
+test: mode=nn msb_first=1 n=09, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=10, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=11, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=12, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=13, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=14, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=15, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=16, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=17, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=18, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=19, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=20, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=21, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=22, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=23, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=24, j=16, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=04, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=1 n=05, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=1 n=06, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=1 n=07, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=1 n=08, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 18432) = 0
+test: mode=nn msb_first=1 n=09, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=10, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=11, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=12, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=13, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=14, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=15, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=16, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 36864) = 0
+test: mode=nn msb_first=1 n=17, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=18, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=19, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=20, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=21, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=22, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=23, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=24, j=18, blocks=1024 -------------------
+memcmp(image_in, image_in2, 73728) = 0
+test: mode=nn msb_first=1 n=04, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=05, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=06, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=07, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=08, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 20480) = 0
+test: mode=nn msb_first=1 n=09, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=10, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=11, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=12, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=13, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=14, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=15, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=16, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 40960) = 0
+test: mode=nn msb_first=1 n=17, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=18, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=19, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=20, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=21, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=22, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=23, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=24, j=20, blocks=1024 -------------------
+memcmp(image_in, image_in2, 81920) = 0
+test: mode=nn msb_first=1 n=04, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=1 n=05, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=1 n=06, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=1 n=07, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=1 n=08, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 22528) = 0
+test: mode=nn msb_first=1 n=09, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=10, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=11, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=12, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=13, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=14, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=15, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=16, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 45056) = 0
+test: mode=nn msb_first=1 n=17, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=18, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=19, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=20, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=21, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=22, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=23, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=24, j=22, blocks=1024 -------------------
+memcmp(image_in, image_in2, 90112) = 0
+test: mode=nn msb_first=1 n=04, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=05, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=06, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=07, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=08, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 24576) = 0
+test: mode=nn msb_first=1 n=09, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=10, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=11, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=12, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=13, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=14, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=15, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=16, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 49152) = 0
+test: mode=nn msb_first=1 n=17, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=18, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=19, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=20, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=21, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=22, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=23, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=24, j=24, blocks=1024 -------------------
+memcmp(image_in, image_in2, 98304) = 0
+test: mode=nn msb_first=1 n=04, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=1 n=05, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=1 n=06, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=1 n=07, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=1 n=08, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 26624) = 0
+test: mode=nn msb_first=1 n=09, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=10, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=11, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=12, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=13, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=14, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=15, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=16, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 53248) = 0
+test: mode=nn msb_first=1 n=17, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=18, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=19, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=20, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=21, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=22, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=23, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=24, j=26, blocks=1024 -------------------
+memcmp(image_in, image_in2, 106496) = 0
+test: mode=nn msb_first=1 n=04, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=05, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=06, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=07, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=08, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 28672) = 0
+test: mode=nn msb_first=1 n=09, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=10, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=11, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=12, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=13, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=14, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=15, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=16, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 57344) = 0
+test: mode=nn msb_first=1 n=17, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=18, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=19, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=20, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=21, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=22, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=23, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=24, j=28, blocks=1024 -------------------
+memcmp(image_in, image_in2, 114688) = 0
+test: mode=nn msb_first=1 n=04, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=1 n=05, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=1 n=06, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=1 n=07, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=1 n=08, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 30720) = 0
+test: mode=nn msb_first=1 n=09, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=10, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=11, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=12, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=13, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=14, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=15, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=16, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 61440) = 0
+test: mode=nn msb_first=1 n=17, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=18, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=19, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=20, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=21, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=22, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=23, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=24, j=30, blocks=1024 -------------------
+memcmp(image_in, image_in2, 122880) = 0
+test: mode=nn msb_first=1 n=04, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=05, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=06, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=07, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=08, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 32768) = 0
+test: mode=nn msb_first=1 n=09, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=10, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=11, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=12, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=13, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=14, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=15, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=16, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 65536) = 0
+test: mode=nn msb_first=1 n=17, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=18, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=19, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=20, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=21, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=22, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=23, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+test: mode=nn msb_first=1 n=24, j=32, blocks=1024 -------------------
+memcmp(image_in, image_in2, 131072) = 0
+All tests passed.
+PASS gentest (exit status: 0)

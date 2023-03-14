@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.2  (Win32)">
+	<META NAME="AUTHOR" CONTENT="twig twig">
+	<META NAME="CREATED" CONTENT="20081116;21561500">
+	<META NAME="CHANGEDBY" CONTENT="twig twig">
+	<META NAME="CHANGED" CONTENT="20090208;18581353">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		TD P { margin-bottom: 0cm }
+		H1 { margin-bottom: 0.16cm; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.16cm; padding-left: 0cm; padding-right: 0cm; font-family: "Bitstream Vera Sans", "Arial", "Helvetica", "Lucida", "Geneva", "Helmet", sans-serif, "Andale Sans UI", "Arial Unicode MS", "Lucida Sans Unicode", "Tahoma"; font-size: 18pt }
+		H2 { margin-bottom: 0.18cm; font-family: "Bitstream Vera Sans", "Arial", "Helvetica", "Lucida", "Geneva", "Helmet", sans-serif, "Andale Sans UI", "Arial Unicode MS", "Lucida Sans Unicode", "Tahoma"; font-size: 14pt }
+		H3 { margin-bottom: 0.21cm }
+		H3.western { font-family: "Arial", sans-serif }
+		H4 { margin-bottom: 0.21cm }
+		H4.western { font-family: "Arial", sans-serif; font-size: 11pt; font-style: italic }
+		H4.cjk { font-size: 11pt; font-style: italic }
+		H4.ctl { font-size: 11pt; font-style: italic }
+		H6 { margin-bottom: 0.21cm }
+		H6.western { font-family: "Arial", sans-serif; font-size: 10pt }
+		H6.cjk { font-size: 10pt }
+		H6.ctl { font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=5><B>NLMorphologyViewer
+ (Version 0.1.0)</B></FONT></FONT></P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=5><B>User
+Manual (Version 0.1)</B></FONT></FONT></P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=5><B>8<SUP>th</SUP>
+February 2009</B></FONT></FONT></P>
+<P ALIGN=CENTER><A HREF="http://www.neuronland.org/"><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=5><B>www.neuronland.org</B></FONT></FONT></A></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<OL>
+	<H1>Overview</H1>
+</OL>
+<P STYLE="font-weight: medium"><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3><SPAN STYLE="font-weight: medium">	&ldquo;NLMorphologyViewer&rdquo;
+is a simple interactive 3D viewer for neuron morphology data files.
+It is built on top of the file format conversion technology developed
+for the &ldquo;NLMorphologyConverter&rdquo;, and supports the same 20
+file formats which the original command line application supports,
+including Neurolucida, SWC, MorphML, NeuroZoom, Eutectics, and many
+others. </SPAN></FONT></FONT></FONT></FONT>
+</P>
+<P STYLE="font-weight: medium"> <FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3>	
+<FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3><SPAN STYLE="font-weight: medium">&ldquo;NLMorphologyViewer&rdquo;
+</SPAN></FONT></FONT>is designed to be a easier to use than
+&ldquo;NLMorphologyConverter&rdquo;, adding extra display
+functionality that allows a visual inspection of morphology data
+files.</FONT></FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3>	<FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3><SPAN STYLE="font-weight: medium">The
+application is free,  and (eventually) will be multi-platform. It </SPAN></FONT></FONT>is
+currently only available as a binary download for Microsoft Windows.
+There is a plan to release Apple Mac OSX  and Linux versions in the
+near future.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<OL START=0>
+	<H1>Main Features</H1>
+</OL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, Times, serif">Import
+	20 different file formats, with auto-detection of file format.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, Times, serif">Neuron
+	morphology 3D visualisation.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, Times, serif">Neuron
+	statistics and fault data window.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, Times, serif">Manipulation
+	of imported neuron data for visualisation and export.</FONT></P>
+</UL>
+<P><BR><BR>
+</P>
+<OL START=0>
+	<H1>Installation</H1>
+</OL>
+<P><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3><B>Windows</B></FONT></FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Times New Roman, Times, serif"><FONT SIZE=3>The
+Win32 version comes in a standard microsoft installer package (msi).
+Simply double-click on the installation package to install. </FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<OL START=0>
+	<H1> Tutorial</H1>
+</OL>
+<OL>
+	<OL>
+		<H2>MENUS</H2>
+		<OL>
+			<H3 CLASS="western">File</H3>
+		</OL>
+	</OL>
+</OL>
+<H4 CLASS="western">Import</H4>
+<P>This menu contains commands that are applied to the current neuron
+file, import a new file or close the application. 
+</P>
+<P>Import neuron data from the selected file.  If the data is in a
+supported format, the file format will be automatically determined. 
+Note that for large data files, and depending on the data format, the
+data may take a several seconds to load.</P>
+<P>This command is always available to the user.  If a neuron is
+imported while a previous neuron is still loaded, the previous neuron
+will be discarded automatically.</P>
+<H4 CLASS="western">Export 
+</H4>
+<P>Export current neuron data to a file. 
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><H6 CLASS="western">Export Original Neuron As</H6>
+		</UL>
+	</UL>
+</UL>
+<UL>
+	<P>Saves the Neuron original data with the user selected name and
+	format.</P>
+</UL>
+<UL>
+	<UL>
+		<UL>
+			<LI VALUE=1><H6 CLASS="western">Export Visible Neuron As</H6>
+		</UL>
+	</UL>
+</UL>
+<UL>
+	<P>Saves the currently visible neuron data with the user selected
+	name and format. (i.e. the neuron components which the user has not
+	explicitly deactivated).</P>
+</UL>
+<P><BR><BR>
+</P>
+<P>In both cases, the export dialog will only allow a neuron to be
+exported to a file format which supports the data.  For example,
+trees with trinary branch points cannot be exported to formats which
+only support binary branch points.</P>
+<P>The user has to select the location, name and format for the
+exported file data.</P>
+<P>The commands are only activated while a neuron is currently loaded</P>
+<H4 CLASS="western">Save Image</H4>
+<P>Not applicable in current version.</P>
+<H4 CLASS="western">Close Neuron</H4>
+<UL>
+	<P>Close current neuron without exiting the application. The 3D view
+	window will be cleared, and commands which require the presence of
+	neuron data will be disabled.</P>
+	<P></P>
+</UL>
+<P>This command is only activated while a neuron is currently loaded</P>
+<H4 CLASS="western">Exit</H4>
+<UL>
+	<P>Closes the application.</P>
+	<P></P>
+</UL>
+<OL>
+	<OL>
+		<OL START=0>
+			<H3 CLASS="western">View</H3>
+		</OL>
+	</OL>
+</OL>
+<H4 CLASS="western">Neuron Components Data</H4>
+<P>Shows or hides the neuron components data panel on the left hand
+side of the window.</P>
+<H4 CLASS="western">Sample Data Points  &amp;  Sample Line Segments  
+</H4>
+<P>Select the style of 3D visualisation of the Neuron.  At the
+moment, two simple views are available.  One shows all the original
+data points.  The other displays the shape and connectivity of the
+data, by connecting sample points with lines.  
+</P>
+<P>Future versions will contain more sophisticated visualisations.</P>
+<P><BR><BR>
+</P>
+<OL>
+	<OL>
+		<OL START=0>
+			<H3 CLASS="western">Help</H3>
+		</OL>
+	</OL>
+</OL>
+<H4 CLASS="western">View User Manual</H4>
+<P>Opens this user manual in a new window.</P>
+<H4 CLASS="western">About</H4>
+<P>Shows general information about the application, including version
+number, authors.</P>
+<P><BR><BR>
+</P>
+<OL>
+	<OL START=0>
+		<H2>PANELS</H2>
+		<OL>
+			<H3 CLASS="western">Neuron Component Data</H3>
+		</OL>
+	</OL>
+</OL>
+<P>When active (it is active by default), this panel always resides
+on the left, and consists of two sub-panels.. 
+</P>
+<H4 CLASS="western">Top Panel &ndash; Neuron Components List</H4>
+<P>Shows the list of all the neuron components (somas, dendritic
+trees and axon trees).  All components may be selected and their
+colour or visibility modified. For each component the following
+information appears in the list:</P>
+<UL>
+	<LI><P>Type of component  (Soma, Dendritic Tree, Axon Tree)</P>
+	<LI><P>Visibility - (Y)es or (N)o</P>
+	<LI><P>Markers  -  not active in this version.</P>
+	<LI><P>Color of the component in the 3D neuron window  (the colour
+	of the text matches the colour of the component in the 3D display).</P>
+</UL>
+<P>To select a component mouse click on it. To select more than one,
+keep the &ldquo;ctrl&rdquo; key pressed while selecting.</P>
+<P>The buttons for modifying the components are only enabled when
+there is one or more components selected in the list.</P>
+<UL>
+	<UL>
+		<UL>
+			<UL>
+				<LI VALUE=1><H6 CLASS="western">Button ON/OFF</H6>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<P>	Toggle the visibility of the selected neuron components. 
+Non-visible components will be greyed-out in the list and will be not
+shown in the 3D neuron display. 
+</P>
+<UL>
+	<UL>
+		<UL>
+			<UL>
+				<LI><H6 CLASS="western">Button Colour</H6>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<P>Displays a Colour selection dialog to choose the colour of the
+selected components. Selecting a colour and pressing the accept
+button results in the components colour change to the new one.</P>
+<H4 CLASS="western">Bottom Panel &ndash; Statistics and Warnings</H4>
+<H6 CLASS="western">Warnings Tab</H6>
+<P>Displays a list of  warnings  (if any) indicating
+unusual/unrealistic/problematic data related to the Neuron Data. 
+</P>
+<P>The following warnings might be shown</P>
+<UL>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Tree root too distant
+	from soma </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Unary branch point </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Non-binary branch point </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Disjoint branch
+	connection </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Branch has zero samples </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Branch formed from only
+	one sample </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Sample diameter is
+	excessively large </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Sample diameter is
+	unusually small </FONT>
+	</P>
+	<P><FONT SIZE=3>Sample diameter is zero</FONT></P>
+</UL>
+<P STYLE="margin-left: 1.25cm"><FONT SIZE=3>Unusually large change in
+diameter</FONT></P>
+<UL>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Large terminal diameter </FONT>
+	</P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Unusually long section </FONT>
+	</P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Unusually short section </FONT>
+	</P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm"><FONT SIZE=3>Intersecting sections </FONT>
+	</P>
+</UL>
+<UL>
+	<P><FONT SIZE=3>Encapsulated branch (a child branch lies completely
+	within the extent of its parent). </FONT>
+	</P>
+</UL>
+<H6 CLASS="western">Statistics Tab</H6>
+<P>Displays the statistics for the neuron as a whole (if no
+individual component is selected in the list), or for the individual
+axonal/dendritic <SPAN STYLE="text-decoration: none">trees selected</SPAN>.</P>
+<P>If there is one dendrite or axon component selected in the
+components list, it displays the component statistics, otherwise it
+displays the entire neuron ones.</P>
+<P>The following Statistics data are shown:</P>
+<UL>
+	<P STYLE="margin-bottom: 0cm; line-height: 100%"><FONT SIZE=3>Number
+	of sample points </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm; line-height: 100%"><FONT SIZE=3>Number
+	of branch points </FONT>
+	</P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm; line-height: 100%"><FONT SIZE=3>Branching
+	order </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm; line-height: 100%"><FONT SIZE=3>Number
+	of terminals </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 100%">
+	<FONT SIZE=3>Total tree branch length (microns)</FONT></P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 100%">
+	<FONT SIZE=3>Tree surface area (microns^2)</FONT></P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 100%">
+	<FONT SIZE=3>Tree volume (microns^3)</FONT></P>
+</UL>
+<UL>
+	<P STYLE="margin-bottom: 0cm; line-height: 100%"><FONT SIZE=3>Maximum
+	terminal path distance (microns) </FONT>
+	</P>
+</UL>
+<UL>
+	<P STYLE="line-height: 100%"><FONT SIZE=3>Maximum terminal physical
+	distance (microns)</FONT></P>
+</UL>
+<P STYLE="line-height: 100%"><BR><BR>
+</P>
+<H2></H2>
+<H2><FONT SIZE=4><B>Neuron 3D Display</B></FONT></H2>
+<P STYLE="font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=3>When a neuron is
+imported, it will be immediately displayed in the 3D window.
+Initially the neuron  is rotating around the y axis, and the camera
+is positioned at a distance so that most of the neuron should be
+visible.</FONT></P>
+<P STYLE="font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=3>To stop the neuron
+rotating &ndash; left click in the window without moving the mouse</FONT></P>
+<P STYLE="font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=3>To take control of the
+neuron &ndash; keep the left mouse button down and drag the mouse in
+the direction you with the neuron to rotate.</FONT></P>
+<P STYLE="font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=3>To spin the neuron in a
+specific direction &ndash; left click the mouse button, keep it
+pressed, drag, and release...</FONT></P>
+<P STYLE="font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=3>Using a combination of
+these actions, the neuron can be manipulated (<FONT SIZE=3><SPAN STYLE="font-weight: medium">around
+the center of rotation, which cannot currently be altered)  </SPAN></FONT>to
+any position in 3D space.</FONT></P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

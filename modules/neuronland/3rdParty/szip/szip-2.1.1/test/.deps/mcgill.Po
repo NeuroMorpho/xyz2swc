@@ -1,0 +1,3 @@
+mcgill.o: mcgill.c /usr/include/stdc-predef.h mcgill.h
+/usr/include/stdc-predef.h:
+mcgill.h:
