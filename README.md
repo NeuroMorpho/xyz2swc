@@ -39,7 +39,11 @@ Refer to the detailed installation instructions below for other specific softwar
 
 ### *Option 1: Local installation using Docker*
 
-If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies.
+If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:
+
+- `$ docker pull neuromorpho/xyz2swc:latest`
+
+You can also build the docker image from scratch using the instructions below. Please note that the system is built and tested for Ubuntu Linux. Other platforms may need adaptions to work.
 
 - Clone this repository: `$ git clone https://github.com/NeuroMorpho/xyz2swc.git`
 - Install [docker](https://docs.docker.com/get-docker/)
@@ -83,5 +87,36 @@ Navigate to the `xyz2swc` folder and run the converter by executing the python s
 
 ### Instructions for use
 Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize), and execute the `convert.py` script as described in the [Demo](#Demo) above. 
+
+---
+
+## Supported tools and formats
+
+| **File Format** | **Converter Module(s)** | **Programming Language(s)** | **No. of Variations Supported** |
+|---|---|---|---|
+| Amira AM | natverse | R | 3 |
+| Arbor | NeuronLand | C++ | 1 |
+| ESWC | Custom | Python | 2 |
+| Eutectics NTS | NeuronLand; Custom | C++; Python | 4 |
+| Genesis | NeuronLand | C++ | 2 |
+| Gulyas | NeuronLand | C++ | 1 |
+| HBP Morphology Viewer SWC+ | Custom | Python | 1 |
+| Imaris IMS | NeuronLand (HDF5 Library) | C++ | 1 |
+| KNOSSOS NML | Custom | Python | 1 |
+| Neurolucida ASC | NeuronLand; HBP (Customized) | C++; Node.js | 7 |
+| Neurolucida DAT | NeuronLand; HBP (Customized) | C++; Node.js | 3 |
+| Neurolucida NRX | NeuronLand; HBP (Customized) | C++; Node.js | 1 |
+| Neurolucida XML | NeuronLand; HBP (Customized) | C++; Node.js | 1 |
+| NeuroML | NeuronLand; Custom | C++; Python | 15 |
+| NeuronJ NDF | Bonfire (Customized) | Matlab | 4 |
+| Neuron HOC | Custom | Python | 11 |
+| NeuroZoom | NeuronLand | C++ | 2 |
+| NINDS3D | NeuronLand | C++ | 1 |
+| PSICS | NeuronLand | C++ | 1 |
+| PyKNOSSOS NMX | Custom | Python | 1 |
+| SNT TRACES | FIJI (SNT plugin); Custom | Java; Python | 2 |
+| TREES Toolbox MTR | TREES Toolbox (Customized) | Matlab | 1 |
+| TREES Toolbox MAT | TREES Toolbox (Customized) | Matlab | 2 |
+
 
 ---
