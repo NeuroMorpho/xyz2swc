@@ -41,12 +41,15 @@ Refer to the detailed installation instructions below for other specific softwar
 
 If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies.
 
+- Clone this repository: `$ git clone https://github.com/NeuroMorpho/xyz2swc.git`
 - Install [docker](https://docs.docker.com/get-docker/)
+- Download MATLAB Runtime from [here](https://www.mathworks.com/products/compiler/matlab-runtime.html) and save into the file lib/matlab_rt.zip
+- Download Fiji from [here](https://downloads.imagej.net/fiji/latest/fiji-linux64.zip) and save into the file modules/snt/fiji-linux64.zip
 - Build the docker image using docker compose: `$ docker compose up`
 - Wait for build to complete, this usually takes 5-10 minutes
 - Once build is completed and docker image is deployed, UI will be accessible at port 8001 of localhost: http://localhost:8001
 
-**Total estimated time for local installation using Docker:** 15-30 minutes
+**Total estimated time for local installation using Docker:** 15-30 minutes, excluding download time for MATLAB Runtime and FIJI.
 
 ### *Option 2: Local installation from scratch*
 
