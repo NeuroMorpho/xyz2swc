@@ -51,8 +51,8 @@ RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-
 RUN Rscript -e 'install.packages("nat", dependencies=TRUE)'
 
 ## Matlab runtime
-COPY lib/matlab_rt.zip /app/lib/
-WORKDIR /app/lib
+COPY lib/matlab_rt.zip /app/lib/matlab_rt/
+WORKDIR /app/lib/matlab_rt/
 RUN unzip matlab_rt.zip
 WORKDIR /app
 COPY modules/ndf /app/modules/ndf
@@ -76,7 +76,7 @@ RUN apt-get -y install openjdk-11-jdk
 COPY lib/ImageJ-linux64 /app/lib/
 COPY modules/snt/ /app/modules/snt
 
-RUN apt-get -y install nodejs npm
+RUN apt-get -y install nodejs npm apt-file
 
 WORKDIR /app/modules/snt
 RUN unzip fiji-linux64.zip
