@@ -85,6 +85,24 @@ Navigate to the `xyz2swc` folder and run the converter by executing the python s
 - The program automatically searches and imports the reconstruction files from `./input/to_convert/` folder. Demo sample file are provided in this folder.
 - On successful conversion the SWC files are saved into the `./output/converted` folder. The folder also contains a `converted_checklist.csv` for a quick inspection of the conversion status of each file.
 
+The following checks are done, both for checked files as well as for the converted files:
+
+| **Check**  | **Action/Correction**  |
+|---|---|
+| Missing Field  | If the SWC points matrix does not have seven columns, then return an error. All further checks are omitted.  |
+| Number of Lines  | - Generate an error if no samples are detected. All further checks are omitted.  - If fewer than 20 lines, generate a warning to check file integrity.   |
+| Number of soma Samples  | Generate warning if no soma samples detected.  |
+| Invalid Parent  | If the Parent points to an Index value that does not exist, then make the sample with the invalid Parent a root point, and generate a warning to check file integrity.  |
+| Index/Parent Integer  | If Index and/or Parent are float-formatted integer (e.g., “1.00”), format them as integers. If they are non-integer values (e.g., “1.34”) or non-numerical entries (e.g, “abc”), generate an error.  |
+| XYZ Double  | Ensure X, Y, and Z coordinates are float/double values. Any NaN or NA values detected in the ASCII text file are treated as 0.0, and a warning is issued to check file integrity.   |
+| Radius Positive Double  | - Ensure sample Radius is a double/float value.  - If radius is negative or zero, set to 0.5.  - Set any NaN or NA Radius values to 0.5 and generate a warning to check file integrity.  |
+| Non-Standard Type  | - If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 6 indicating 'unspecified neurite'.  - If Type is 0 or an integer greater than 7, set to Type 6.  - If bifurcation and terminal points have non-standard Types, set them to that of parent.   |
+| Sequential Index  | If the Index values are not in sequential order (starting from 1), then sort and reset Index and Parent numbering.   |
+| Sorted Order  | - If parent samples are referred to before being defined, then sort and reset Index and Parent numbering.  - Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
+| Soma Contours  | Detect soma contour(s), and replace each with a single point. |
+
+
+
 ### Instructions for use
 Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize), and execute the `convert.py` script as described in the [Demo](#Demo) above. 
 
