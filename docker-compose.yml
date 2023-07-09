@@ -4,11 +4,4 @@ services:
     build: .
     ports:
       - "8001:8001"
- #   networks:
-#      nw_containers:
-#        ipv4_address: 10.5.0.2
-
-#networks:
-#  nw_containers:
-#    external:
-#      name: custom_bridge
+    restart: always
