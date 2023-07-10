@@ -1,6 +1,7 @@
-# Example how to use the xyz2swc API
+# Example how to use the xyz2swc API:
 # 1 ) upload and convert two files to the server
-# 2 ) download the swc files
+# 2 ) download the swc files as a zip to folder output/converted.zip
+# 3 ) download the log files as a zip to folder output/logs.zip
 
 import requests
 import os
@@ -10,6 +11,7 @@ requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += 'HIGH:!DH:!aNULL'
 
 # define base url
 base_url = 'https://neuromorpho.org/xyz2swc/'
+# local_base_url = 'http://localhost:8001/' # for local testing
 
 # define the files to upload
 file1path = 'input/to_convert/neuron_Neurolucida_DAT.dat'
@@ -18,7 +20,6 @@ files = [('files', (os.path.basename(file1path), open(file1path, 'rb'))),
          ('files', (os.path.basename(file2path), open(file2path, 'rb')))]
 
 # upload and convert the files
-print(files)
 r = requests.post(base_url + 'convertfiles',
                   files=files,
                   verify=False)
