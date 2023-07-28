@@ -104,12 +104,12 @@ def single(inputfile, outputfile=None, logdir='./logs', verbose=True):
         conversion_status = check_if_empty(outputfile) if(res.returncode == 0) else 'FAIL'
 
         if conversion_status == 'FAIL':
-            exec_name = "/app/modules/neuronland/NeuronMorphologyFormatConverter"
+            exec_name = "nmoc"
             res = subprocess.run([exec_name, inputfile, outputfile, 'swc'])
             conversion_status = 'SUCCESS' if(res.returncode == 0) else 'FAIL'
 
     elif ending in ['.ims', '.nts', '.ntr', '.nst', '.anat', '.bur', '.p']:  # other formats supported by neuronland
-        exec_name = "/app/modules/neuronland/NeuronMorphologyFormatConverter"
+        exec_name = "nmoc"
         res = subprocess.run([exec_name, inputfile, outputfile, 'swc'])
         conversion_status = 'SUCCESS' if(res.returncode == 0) else 'FAIL'
 

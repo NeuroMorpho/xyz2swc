@@ -210,12 +210,13 @@ async def checkfiles(
         foldername = "".join(namearr)
     else:
         foldername = folder
-
-    infolder = os.path.join(foldername, "input")
-    outfolder = os.path.join(foldername, "output")
-    logfolder = os.path.join(foldername, "logs")
-    if not os.path.exists(foldername):
-        os.mkdir(foldername)
+    usefolder = os.path.join("data", foldername)
+    
+    infolder = os.path.join(usefolder, "input")
+    outfolder = os.path.join(usefolder, "output")
+    logfolder = os.path.join(usefolder, "logs")
+    if not os.path.exists(usefolder):
+        os.mkdir(usefolder)
         if not os.path.exists(infolder):
             os.mkdir(infolder)
         if not os.path.exists(outfolder):
@@ -274,12 +275,13 @@ async def convertfiles(
         foldername = "".join(namearr)
     else:
         foldername = folder
+    usefolder = os.path.join("data", foldername)
 
-    infolder = os.path.join(foldername, "input")
-    outfolder = os.path.join(foldername, "output")
-    logfolder = os.path.join(foldername, "logs")
-    if not os.path.exists(foldername):
-        os.mkdir(foldername)
+    infolder = os.path.join(usefolder, "input")
+    outfolder = os.path.join(usefolder, "output")
+    logfolder = os.path.join(usefolder, "logs")
+    if not os.path.exists(usefolder):
+        os.mkdir(usefolder)
         if not os.path.exists(infolder):
             os.mkdir(infolder)
         if not os.path.exists(outfolder):
@@ -336,6 +338,7 @@ async def convertfiles(
 async def getzipped(request: Request, folder: str):
     """
     Get the zipped folder for a given folder"""
+    folder = os.path.join("data", folder)
     outfolder = os.path.join(folder, "output")
     res = zipfolder(outfolder, folder + ".zip")
     return res
@@ -350,6 +353,7 @@ async def getzipped(request: Request, folder: str):
 async def getlogs(request: Request, folder: str):
     """
     Get the logs for a given folder"""
+    folder = os.path.join("data", folder)
     outfolder = os.path.join(folder, "logs")
     res = zipfolder(outfolder, folder + "logs.zip")
     return res
