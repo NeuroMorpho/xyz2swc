@@ -3,6 +3,9 @@ const remoteurl = '..';
 // generate random folder name
 var remotefolder = Math.random().toString(20).slice(2);
 
+var progress_success = 0;
+var progress_failed = 0;
+
 var filesdm = {
   get: function (id) {
     return this.data[id];
@@ -80,7 +83,7 @@ const preview = document.querySelector('.preview');
 
 
 const fileTypes = [
-    "dat","asc","ims","swc","hoc","nml","mtr","ims","nmx","mat","traces","ndf","am"
+    "dat","asc","ims","swc","hoc","nml","mtr","ims","nmx","mat","traces","ndf","am","stl"
 ];
   
 function validFileType(file) {
@@ -127,7 +130,7 @@ function sendConvert () {
     
 
     data.append('folder',remotefolder)
-  
+
     // (B) INIT FETCH POST
     fetch(remoteurl + `/convertfiles?folder=${remotefolder}`, {
       method: "POST",
@@ -136,7 +139,11 @@ function sendConvert () {
   
     // (C) RETURN SERVER RESPONSE AS TEXT
     .then((result) => {
-      if (result.status != 200) { throw new Error("Bad Server Response"); }
+      if (result.status != 200) {
+        // update failed progress bar
+        
+        throw new Error("Bad Server Response"); 
+      }
       return result.text();
     })
   
@@ -156,6 +163,11 @@ function sendConvert () {
           checkbutton.setAttribute('class','btn btn-success');
           checkbutton.innerText = 'Checked';
           checkbutton.setAttribute('data-bs-content',`<div><div>${response["converted"][afile]["report"]}</div></div>`.replace(/[\t\n]/g,"").replace(/"/g,"'"));
+          // update success progress bar
+          progress_success += 1;
+          nFiles = Object.keys(filesdm.data).length;
+          var progressbar = document.getElementById('progress-success');
+          progressbar.setAttribute('style',`width: ${progress_success/nFiles*100}%;`);
         }
         else {
           convButton.innerText = 'Failed';
@@ -163,18 +175,38 @@ function sendConvert () {
           convButton.setAttribute('class','btn btn-danger');
           checkbutton.setAttribute('class','btn btn-danger');
           checkbutton.innerText = 'Failed';
-          checkbutton.setAttribute('data-bs-content',`<div><div>${response["converted"][afile]["report"]}</div></div>`.replace(/[\t\n]/g,"").replace(/"/g,"'"));
+          checkbutton.setAttribute('data-bs-content','<div><div><b>Bad Server Response</div></div>');
+          // update failed progress bar
+          progress_failed += 1;
+          nFiles = Object.keys(filesdm.data).length;
+          var progressbar = document.getElementById('progress-failed');
+          progressbar.setAttribute('style',`width: ${progress_failed/nFiles*100}%;`);
         }
 
         
 
       }
     })
+    .catch((error) => {
+/*       convButton = document.getElementById(`bstatus_${afile.name}`);
+      checkbutton = document.getElementById(`chkstatus_${afile.name}`);
+      convButton.innerText = 'Failed';
+      filesdm.updatestatus(afile.name,'Failed');
+      convButton.setAttribute('class','btn btn-danger');
+      checkbutton.setAttribute('class','btn btn-danger');
+      checkbutton.innerText = 'Failed';
+      checkbutton.setAttribute('data-bs-content',`<div><div><b>${error}</b></div></div>`); */
+      // update failed progress bar
+      progress_failed += 1;
+      nFiles = Object.keys(filesdm.data).length;
+      var progressbar = document.getElementById('progress-failed');
+      progressbar.setAttribute('style',`width: ${progress_failed/nFiles*100}%;`);
+      console.log(error);
+    })
+    .
   
-    // (E) HANDLE ERRORS - OPTIONAL
-    .catch((error) => { console.log(error); });
   }
-  // (F) PREVENT FORM SUBMIT
+  // (E) PREVENT FORM SUBMIT
   return false;
 }
 

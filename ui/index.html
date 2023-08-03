@@ -19,7 +19,7 @@
         <h2>Upload files</h2>
         <form action="javascript:void(0);">
           <div class="input-group mb-3">
-            <input type="file" onchange="fileinput()" class="form-control" id="fileselector" multiple accept=".zip,.traces,.ndf,.swc,.dat,.hoc,.nml,.mtr,.ims,.nmx,.asc,.mat,.am">
+            <input type="file" onchange="fileinput()" class="form-control" id="fileselector" multiple accept=".stl,.zip,.traces,.ndf,.swc,.dat,.hoc,.nml,.mtr,.ims,.nmx,.asc,.mat,.am">
             <button class="btn btn-outline-secondary" onclick="sendConvert()" type="submit" name="convertbutton" value="active">Convert/Standardize</button>
             <button class="btn btn-outline-secondary" onclick="sendCheck()" type="submit" name="checkbutton" value="active" >Check</button>
           </div>
@@ -28,9 +28,12 @@
       <div class="container preview">
         <p>No files selected</p>
       </div>
-
       <div class="container">
         <h2>List of files</h2>
+        <div class="progress">
+          <div id="progress-success" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          <div id="progress-failed" class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
         <table class="table">
           <thead>
             <tr>
