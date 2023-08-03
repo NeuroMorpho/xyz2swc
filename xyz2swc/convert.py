@@ -4,7 +4,8 @@ import shutil
 import numbers
 import pandas as pd
 import numpy as np
-from .utils import nml2swc, hoc2swc, mergetraces, eswc2swc, mesh2swc
+from oct2py import octave
+from .utils import nml2swc, hoc2swc, mergetraces, eswc2swc, mesh2swc, vtk2swc
 from .standard import chksingle, swccorrect
 from .swcco import extract_contours
 
@@ -120,10 +121,12 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         conversion_status = hoc2swc.hoc2swc(inputfile, outputfile)
 
     elif ending == ".ndf":
-        exec_name = "/app/modules/ndf/run_ndf2swc.sh"
-        matlab_mcr = "/usr/local/MATLAB/R2021a/"
-        res = subprocess.run([exec_name, matlab_mcr, inputfile, outputfile])
-        conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
+        octave.addpath("/app/modules/ndf")
+        try:
+            octave.ndf2swc(inputfile, outputfile)
+            conversion_status = "SUCCESS"
+        except Exception:
+            conversion_status = "FAIL"
 
     elif ending in [".nml", ".nmx"]:
         conversion_status = nml2swc.nml2swc(inputfile, outputfile)
@@ -148,10 +151,12 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
             conversion_status = nml2swc.nml2swc(nmlfilename, outputfile)
 
     elif ending in [".mtr", ".mat"]:
-        exec_name = "/app/modules/mtr/run_mtr2swc.sh"
-        matlab_mcr = "/usr/local/MATLAB/R2021a/"
-        res = subprocess.run([exec_name, matlab_mcr, inputfile, outputfile])
-        conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
+        octave.addpath("/app/modules/mtr")
+        try:
+            octave.mtr2swc(inputfile, outputfile)
+            conversion_status = "SUCCESS"
+        except Exception:
+            conversion_status = "FAIL"
 
     elif ending == ".traces":
         exec_name = "/app/modules/snt/Fiji.app/ImageJ-linux64 --ij2 --headless --console --run "
@@ -172,6 +177,9 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
 
     elif ending in [".stl", ".obj", "ply"]:
         conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
+
+    elif ending in [".vtk"]:
+        conversion_status = vtk2swc.vtk2swc(inputfile, outputfile, mesh_configfile)
 
     # -- if input file is already swc
     # -- new standardized output swc file needs to be created (also need to return correction_list to user)

@@ -9,3 +9,7 @@ pyimagej == 1.2.1
 lxml == 4.8.0
 itsdangerous == 2.1.2
 morph-tool[all] == 2.9.1
+skeletor == 1.2.3
+trimesh == 3.22.5
+pyvista == 0.41.1
+oct2py == 5.6.0

@@ -83,7 +83,7 @@ const preview = document.querySelector('.preview');
 
 
 const fileTypes = [
-    "dat","asc","ims","swc","hoc","nml","mtr","ims","nmx","mat","traces","ndf","am","stl"
+    "dat","asc","ims","swc","hoc","nml","mtr","ims","nmx","mat","traces","ndf","am","stl","vtk"
 ];
   
 function validFileType(file) {
