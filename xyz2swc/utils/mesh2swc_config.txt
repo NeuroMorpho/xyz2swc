@@ -1,0 +1,39 @@
+## by_wavefront() params
+waves=1
+origins=None
+step_size=1
+radius_agg='mean'
+progress=False
+
+## turn on/off mesh contraction
+mesh_contract=True
+
+## contract() params
+epsilon=0.1
+iter_lim=100
+time_lim=40
+precision=1e-07
+SL=2
+WH0=1
+WL0='auto'
+operator='cotangent'
+progress=False
+validate=True
+
+
+# -------------------
+# mesh2swc_config.txt
+# -------------------
+# xyz2swc lets you play around with the above parameters when skeletonizing mesh files
+# Passing paramaters is optional, and default values work great for the majority of neurons
+# If using the web-interface upload this txt file along with the mesh file(s)
+# If running locally place this txt file in the same input-folder as your mesh file(s)
+
+# **CAUTION** While setting new parameter values do NOT shuffle/change/add/remove lines
+#             Values are read sequentially from this config file based on line number
+
+# Details regarding by_wavefront() parameters is available at:
+# https://navis-org.github.io/skeletor/skeletor/skeletonize.html#by_wavefront
+
+# Details regarding contract() parameters is available at:
+# https://navis-org.github.io/skeletor/skeletor/pre.html#contract
