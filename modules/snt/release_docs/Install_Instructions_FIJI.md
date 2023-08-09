@@ -5,7 +5,7 @@
 
 ## 1. [FIJI](https://imagej.net/software/fiji)
 
-[Click here to download](https://downloads.imagej.net/fiji/latest/fiji-linux64.zip) the latest 64-bit Linux portable version of the FIJI application from the project website. 
+[Click here to download](https://downloads.imagej.net/fiji/archive/20201029-1752/fiji-linux64.zip) the 64-bit Linux portable version, dated 2020-10-29, of the FIJI application from the project website. Please note this version is tested and will work, newer versions may not work.
 
 
 Unzip the download into the parent `snt` folder:

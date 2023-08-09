@@ -47,8 +47,6 @@ You can also build the docker image from scratch using the instructions below. P
 
 - Clone this repository: `$ git clone https://github.com/NeuroMorpho/xyz2swc.git`
 - Install [docker](https://docs.docker.com/get-docker/)
-- Download MATLAB Runtime from [here](https://www.mathworks.com/products/compiler/matlab-runtime.html) and save into the file lib/matlab_rt.zip
-- Download Fiji from [here](https://downloads.imagej.net/fiji/latest/fiji-linux64.zip) and save into the file modules/snt/fiji-linux64.zip
 - Build the docker image using docker compose: `$ docker compose up`
 - Wait for build to complete, this usually takes 5-10 minutes
 - Once build is completed and docker image is deployed, UI will be accessible at port 8001 of localhost: http://localhost:8001

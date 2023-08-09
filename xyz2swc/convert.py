@@ -105,12 +105,12 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         conversion_status = check_if_empty(outputfile) if (res.returncode == 0) else "FAIL"
 
         if conversion_status == "FAIL":
-            exec_name = "/app/modules/neuronland/NeuronMorphologyFormatConverter"
+            exec_name = "nmoc"
             res = subprocess.run([exec_name, inputfile, outputfile, "swc"])
             conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
 
     elif ending in [".ims", ".nts", ".ntr", ".nst", ".anat", ".bur", ".p"]:  # other formats supported by neuronland
-        exec_name = "/app/modules/neuronland/NeuronMorphologyFormatConverter"
+        exec_name = "nmoc"
         res = subprocess.run([exec_name, inputfile, outputfile, "swc"])
         conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
 
@@ -152,11 +152,11 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
 
     elif ending in [".mtr", ".mat"]:
         octave.addpath("/app/modules/mtr")
-        try:
-            octave.mtr2swc(inputfile, outputfile)
-            conversion_status = "SUCCESS"
-        except Exception:
-            conversion_status = "FAIL"
+        #try:
+        octave.mtr2swc(inputfile, outputfile)
+        conversion_status = "SUCCESS"
+        #except Exception
+        #    conversion_status = "FAIL"
 
     elif ending == ".traces":
         exec_name = "/app/modules/snt/Fiji.app/ImageJ-linux64 --ij2 --headless --console --run "
@@ -179,7 +179,9 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
 
     elif ending in [".vtk"]:
-        conversion_status = vtk2swc.vtk2swc(inputfile, outputfile, mesh_configfile)
+        conversion_status = vtk2swc.vtk2swc(inputfile,
+                                            outputfile,
+                                            mesh_configfile=mesh_configfile)
 
     # -- if input file is already swc
     # -- new standardized output swc file needs to be created (also need to return correction_list to user)

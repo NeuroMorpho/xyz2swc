@@ -203,9 +203,9 @@ function sendConvert () {
       progressbar.setAttribute('style',`width: ${progress_failed/nFiles*100}%;`);
       console.log(error);
     })
-    .
-  
   }
+  
+
   // (E) PREVENT FORM SUBMIT
   return false;
 }

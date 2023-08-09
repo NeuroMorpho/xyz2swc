@@ -18,6 +18,7 @@ RUN apt-get update
 
 RUN apt-get -y install libhdf5-cpp-100:i386 libhdf5-dev:i386 libhdf5-100:i386 zlib1g:i386 zlib1g-dev:i386 libsz2:i386 libc6-dev-i386 libdlib18:i386 libdlib-dev:i386 make:i386 python3-pip
 RUN apt-get -y install gcc-11 g++-11 gcc-11-multilib g++-11-multilib python3.8 python3.8-dev python3.8-distutils python3.8-venv 
+RUN apt-get -y install wget
 
 #RUN apt-get -y install libssl1.1
 
@@ -50,13 +51,17 @@ RUN gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/' && apt-get update && apt-get -y install r-base
 RUN Rscript -e 'install.packages("nat", dependencies=TRUE)'
 
+
+# Octave
+RUN apt-get -y install octave liboctave-dev
+
 ## Matlab runtime
-COPY lib/matlab_rt.zip /app/lib/matlab_rt/
-WORKDIR /app/lib/matlab_rt/
-RUN unzip matlab_rt.zip
+#COPY lib/matlab_rt.zip /app/lib/matlab_rt/
+#WORKDIR /app/lib/matlab_rt/
+#RUN unzip matlab_rt.zip
 WORKDIR /app
 COPY modules/ndf /app/modules/ndf
-RUN lib/matlab_rt/install -mode silent -agreeToLicense yes
+#RUN lib/matlab_rt/install -mode silent -agreeToLicense yes
 
 
 COPY requirements.txt /app/
@@ -79,6 +84,7 @@ COPY modules/snt/ /app/modules/snt
 RUN apt-get -y install nodejs npm apt-file
 
 WORKDIR /app/modules/snt
+RUN wget https://downloads.imagej.net/fiji/archive/20201029-1752/fiji-linux64.zip
 RUN unzip fiji-linux64.zip
 RUN mkdir /app/modules/snt/logfiles/
 
