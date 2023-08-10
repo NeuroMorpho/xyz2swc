@@ -8,7 +8,7 @@ This repository contains the source code for the *xyz2swc* software --- a univer
 
 ## Running *xyz2swc* online [Preferred Method] 
 
-***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at https://neuromorpho.org/xyz2swc/ui/.
+***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at https://neuromorpho.org/xyz2swc/ui/. Demonstration video of the tool is available at https://vimeo.com/853219729?share=copy.
 
 ***Prerequisites:*** The online service is operating system and programming language independent, and requires no local package installation. 
 
