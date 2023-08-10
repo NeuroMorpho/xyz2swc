@@ -22,7 +22,7 @@
       <td>
         <!-- Button trigger modal -->
         <button style="float: right;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Tool demo
+          Usage demo
         </button>
 
         <!-- Modal -->
@@ -30,7 +30,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Usage demo</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -117,12 +117,49 @@
         <div class="row d-flex justify-content-center">
           <!--Grid column-->
           <div class="col">
-            <p class="pt-2">
-              SWC specification available at <a href="https://swc-specification.readthedocs.io/en/latest/">Readthedocs SWC specification</a>
-            </p>
-            <p class="pt-2">
-              API documentation available at <a href="/xyz2swc/docs">https://neuromorpho.org/xyz2swc/docs/</a>
-            </p>
+            <table>
+              <tr>
+              <td width="50%">
+                <p class="pt-2">
+                  SWC specification available at <a href="https://swc-specification.readthedocs.io/en/latest/">Readthedocs SWC specification</a>
+                </p>
+              </td>
+              <td>
+                <!-- Button trigger modal -->
+                <button style="float: right;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#specmodal">
+                  Specs overview video
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="specmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Specs overview video</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Youtube movie placeholder -->
+                        <div style="padding:75% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/853224668?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="swc_specification_presentation"></iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                      </div>
+                      <div class="modal-footer">
+                        <button style="background-color: black;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              </tr>
+              <tr>
+                <td>
+                  API documentation available at <a href="/xyz2swc/docs">https://neuromorpho.org/xyz2swc/docs/</a>
+                </td>
+              </tr>
+            </table>
+            
           </div>
           <!--Grid column-->
 
