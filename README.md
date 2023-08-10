@@ -107,9 +107,8 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 ---
 
 ## Supported tools and formats
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
 | **Software Application** | **File Format** | **Test Data Source** | **Converter Module(s)** | **Programming Language(s)** | **No. of Variations Supported** |
+| --- | --- | --- | --- | --- | --- |
 | Amira<sup>7,56</sup> *(ThermoFisher, RRID:SCR\_007353)* | .am | Neuromorpho.Org | natverse<sup>28</sup> | R | 3 |
 | Arbor<sup>44</sup> | .swc | Neuromorpho.Org | NeuronLand | C++ | 1 |
 | ESWC<sup>35</sup> | .eswc | Neuromorpho.Org | Custom | Python | 2 |
