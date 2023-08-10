@@ -118,7 +118,7 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | HBP Morphology Viewer SWC+<sup>13</sup> | .swc | Neuromorpho.Org | Custom | Python | 1 |
 | Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>8</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
-| Neuroglancer | .stl .obj .ply  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>57</sup> | Python | 4# |
+| Neuroglancer | .stl .obj .ply  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>57</sup> | Python | 4<sup>#</sup> |
 | Neurolucida<sup>6,20</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP13<sup>†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |
@@ -134,7 +134,8 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | TREES Toolbox<sup>14</sup> | .mtr | Neuromorpho.Org | TREES Toolbox<sup>†</sup> | Octave | 1 |
 | TREES Toolbox | .mat | Neuromorpho.Org | TREES Toolbox<sup>†</sup> | Octave | 2 |
 | Visualization Toolkit<sup>60</sup> | .vtk | Neuromorpho.Org | skeletor<sup>†</sup> | Python | 2 |
-| \*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format. \*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files22, and .nml1 for NeuroML v1 files<sup>21,23</sup>. <sup>†</sup>Customized implementation. #Supports triangle mesh formats (trimsh.org/index.html). ||||||
+
+\*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format. \*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files22, and .nml1 for NeuroML v1 files<sup>21,23</sup>. <sup>†</sup>Customized implementation. <sup>#</sup>Supports triangle mesh formats (trimsh.org/index.html).
 
 ## References
 1.	Donohue, D. E. & Ascoli, G. A. Automated Reconstruction of Neuronal Morphology: An Overview. Brain Res. Rev. 67, 94–102 (2011).
