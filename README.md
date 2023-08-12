@@ -118,12 +118,12 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>3</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
 | Neuroglancer | .stl .obj .ply  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
-| Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP13<sup>†</sup> | C++; Node.js | 7 |
+| Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP<sup>8,†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |
 | Neurolucida | .xml | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |
 | NeuroML<sup>14,15</sup> | .nml\*\* | Neuromorpho.Org | NeuronLand; Custom | C++; Python | 15 |
-| NeuronJ<sup>7</sup> | .ndf | Neuromorpho.Org | Bonfire31<sup>†</sup> | Octave | 4 |
+| NeuronJ<sup>7</sup> | .ndf | Neuromorpho.Org | Bonfire<sup>28,†</sup> | Octave | 4 |
 | NEURON<sup>10,11</sup> | .hoc | Neuromorpho.Org | Custom | Python | 11 |
 | NeuroZoom<sup>24</sup> | .swc | Neuromorpho.Org | NeuronLand | C++ | 2 |
 | NINDS3D<sup>25</sup> | .anat | Neuromorpho.Org | NeuronLand | C++ | 1 |
@@ -165,5 +165,6 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 25.	Cullheim, S., Fleshman, J. W., Glenn, L. L. & Burke, R. E. Membrane area and dendritic structure in type-identified triceps surae alpha motoneurons. J. Comp. Neurol. 255, 68–81 (1987).
 26.	Schroeder, W. J., Martin, K. W. & Lorensen, W. E. The Visualization Toolkit. (Kitware, 2006).
 27.	Crook, S., Gleeson, P., Howell, F., Svitak, J. & Silver, R. A. MorphML: Level 1 of the NeuroML Standards for Neuronal Morphology Data and Model Specification. Neuroinformatics 5, 96–104 (2007).
+28.	Langhammer, C. G. et al. Automated Sholl analysis of digitized neuronal morphology at multiple scales: Whole-cell Sholl analysis vs. Sholl analysis of arbor sub-regions. Cytom. Part J. Int. Soc. Anal. Cytol. 77, 1160–1168 (2010).
 
 ---
