@@ -30,6 +30,7 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
     Optional keyword arguments:
         outputfile:         [string]    Path of converted SWC file. If unspecified will save converted SWC file in the same folder as [inputfile]
         logdir:             [string]    Path of logfiles. Logs will be deleted if 'verbose' option is False.
+        mesh_configfile     [string]    Path to mesh2swc_config.txt, for passing optional parameters when skeletonizing mesh files
         verbose:            [bool]      Toggle to display/suppress console output.
 
     Returns:
@@ -175,7 +176,7 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         res = subprocess.run([command], shell=True)
         conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
 
-    elif ending in [".stl", ".obj", "ply"]:
+    elif ending in [".stl", ".obj", "ply", ".blend"]:
         conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
 
     elif ending in [".vtk"]:
