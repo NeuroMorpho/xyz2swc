@@ -1,11 +1,12 @@
 <head>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.0/dist/themes/bootstrap-table/bootstrap-table.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<style type="text/css">
-    .popover{
-      max-width:800px;
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style type="text/css">
+    .popover {
+      max-width: 800px;
+      z-index: 999;
     }
     .modal-footer button {
       display: block;
@@ -56,7 +57,8 @@
         <h2>Upload files</h2>
         <form action="javascript:void(0);">
           <div class="input-group mb-3">
-            <input type="file" onchange="fileinput()" class="form-control" id="fileselector" multiple accept=".bur,.p,.anat,.obj,ply.vtk,.stl,.zip,.traces,.ndf,.swc,.dat,.hoc,.nml,.mtr,.ims,.nmx,.asc,.mat,.am">
+            <input type="file" onchange="fileinput()" class="form-control" id="fileselector" multiple 
+            accept=".eswc,.nts,.nrx,.xml,.bur,.p,.anat,.obj,.ply,.vtk,.stl,.zip,.traces,.ndf,.swc,.dat,.hoc,.nml,.mtr,.ims,.nmx,.asc,.mat,.am">
             <button class="btn btn-outline-secondary" onclick="sendConvert()" type="submit" name="convertbutton" value="active">Convert/Standardize</button>
             <button class="btn btn-outline-secondary" onclick="sendCheck()" type="submit" name="checkbutton" value="active" >Check</button>
           </div>

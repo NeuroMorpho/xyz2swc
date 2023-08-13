@@ -83,7 +83,12 @@ const preview = document.querySelector('.preview');
 
 
 const fileTypes = [
-    "dat","asc","ims","swc","hoc","nml","mtr","ims","nmx","mat","traces","ndf","am","stl","vtk","obj","ply","p","anat"
+    "xml","dat","asc","ims",
+    "swc","hoc","nml","mtr",
+    "ims","nmx","mat","traces",
+    "ndf","am","stl","vtk",
+    "obj","ply","p","anat",
+    "eswc","nts","nrx"
 ];
   
 function validFileType(file) {
@@ -112,6 +117,11 @@ function clearlist() {
   filelist.innerHTML = '';
   remotefolder = Math.random().toString(20).slice(2);
   document.getElementById('fileselector').value = '';
+  var progressbar = document.getElementById('progress-success');
+  progressbar.setAttribute('style',`width: 0%;`);
+  progressbar = document.getElementById('progress-failed');
+  progressbar.setAttribute('style',`width: 0%;`);
+
 
 }
 
