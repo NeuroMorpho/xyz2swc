@@ -51,23 +51,21 @@ You can also build the docker image from scratch using the instructions below. P
 - Wait for build to complete, this usually takes 5-10 minutes
 - Once build is completed and docker image is deployed, UI will be accessible at port 8001 of localhost: http://localhost:8001
 
-**Total estimated time for local installation using Docker:** 15-30 minutes, excluding download time for MATLAB Runtime and FIJI.
+**Total estimated time for local installation using Docker:** 15-30 minutes, excluding download time for FIJI.
 
 ### *Option 2: Local installation from scratch*
 
 1. **Install Neuronland module:** Detailed install instructions for compiling and building the Neuronland app using `g++/gcc` are available [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/neuronland/release_docs).
 
-2. **Install MATLAB Runtime Compiler:** Conversion of NeuronJ `.ndf`, and TreesToolBox `.mtr` format files require the MATLAB runtime compiler (mcr). Instructions for installing and deploying the stand alone MATLAB application can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/ndf/release_docs/Install_Instructions_Matlab.md). 
+2. **Install R:** Conversion of Amira `.am` format files require the use of R packages and libraries. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
 
-3. **Install R:** Conversion of Amira `.am` format files require the use of R packages and libraries. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
+3. **Setting up FIJI:** Conversion of SNT `.traces` format files require the FIJI (FIJI Is Just ImageJ) application. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
 
-4. **Setting up FIJI:** Conversion of SNT `.traces` format files require the FIJI (FIJI Is Just ImageJ) application. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
-
-5. **Setting up HBP Morphology Viewer:**
+4. **Setting up HBP Morphology Viewer:**
 The HBP converter module requires Node.js and npm: 
 `$ apt-get -y install nodejs npm`
 
-6. **Install Python:** 
+5. **Install Python:** 
 To install the latest version of Python:
 `$ sudo apt install python3`
 Use pip3 to install the necessary package modules:
@@ -88,17 +86,16 @@ The following checks are done, both for checked files as well as for the convert
 | **Check**  | **Action/Correction**  |
 |---|---|
 | Missing Field  | If the SWC points matrix does not have seven columns, then return an error. All further checks are omitted.  |
-| Number of Lines  | - Generate an error if no samples are detected. All further checks are omitted.  - If fewer than 20 lines, generate a warning to check file integrity.   |
+| Number of Lines  | Generate an error if no samples are detected. All further checks are omitted.  If fewer than 20 lines, generate a warning to check file integrity.   |
 | Number of soma Samples  | Generate warning if no soma samples detected.  |
 | Invalid Parent  | If the Parent points to an Index value that does not exist, then make the sample with the invalid Parent a root point, and generate a warning to check file integrity.  |
 | Index/Parent Integer  | If Index and/or Parent are float-formatted integer (e.g., “1.00”), format them as integers. If they are non-integer values (e.g., “1.34”) or non-numerical entries (e.g, “abc”), generate an error.  |
-| XYZ Double  | Ensure X, Y, and Z coordinates are float/double values. Any NaN or NA values detected in the ASCII text file are treated as 0.0, and a warning is issued to check file integrity.   |
-| Radius Positive Double  | - Ensure sample Radius is a double/float value.  - If radius is negative or zero, set to 0.5.  - Set any NaN or NA Radius values to 0.5 and generate a warning to check file integrity.  |
-| Non-Standard Type  | - If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 6 indicating 'unspecified neurite'.  - If Type is 0 or an integer greater than 7, set to Type 6.  - If bifurcation and terminal points have non-standard Types, set them to that of parent.   |
-| Sequential Index  | If the Index values are not in sequential order (starting from 1), then sort and reset Index and Parent numbering.   |
-| Sorted Order  | - If parent samples are referred to before being defined, then sort and reset Index and Parent numbering.  - Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
+| XYZ Double  | Ensure X, Y, and Z coordinates are float/double values. Any NaN or N/A values detected in the ASCII text file are treated as 0.0. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
+| Radius Positive Double  | Ensure sample Radius is a double/float value. If radius is negative, zero, NaN, or N/A, then set to 0.5. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
+| Non-Standard Type  | If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 0 indicating 'undefined'. If bifurcation and terminal points have non-standard Types, set them to that of parent.  |
+| Sequential Index  | If the Index values are not in sequential order (starting from 1), then sort and reset Index and Parent numbering. |
+| Sorted Order  | If parent samples are referred to before being defined, then sort and reset Index and Parent numbering. Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
 | Soma Contours  | Detect soma contour(s), and replace each with a single point. |
-
 
 
 ### Instructions for use
@@ -117,7 +114,7 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | HBP Morphology Viewer SWC+<sup>8</sup> | .swc | Neuromorpho.Org | Custom | Python | 1 |
 | Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>3</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
-| Neuroglancer | .stl .obj .ply  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
+| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply .blend  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
 | Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP<sup>8,†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |

@@ -206,15 +206,15 @@
                             </tr>
                             <tr>
                             <td>XYZ Double</td>
-                            <td>Ensure X, Y, and Z coordinates are float/double values. Any NaN or NA values detected in the ASCII text file are treated as 0.0, and a warning is issued to check file integrity.</td>
+                            <td>Ensure X, Y, and Z coordinates are float/double values. Any NaN or NA values detected in the ASCII text file are treated as 0.0. Generate a warning to check file integrity, and add a footer to the file to note inserted values.</td>
                             </tr>
                             <tr>
                             <td>Radius Positive Double</td>
-                            <td>- Ensure sample Radius is a double/float value.  - If radius is negative or zero, set to 0.5.  - Set any NaN or NA Radius values to 0.5 and generate a warning to check file integrity.</td>
+                            <td>Ensure sample Radius is a double/float value. If radius is negative, zero, NaN, or NA, then set to 0.5. Generate a warning to check file integrity, and add a footer to the file to note inserted values.</td>
                             </tr>
                             <tr>
                             <td>Non-Standard Type</td>
-                            <td>- If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 6 indicating &#39;unspecified neurite&#39;.  - If Type is 0 or an integer greater than 7, set to Type 6.  - If bifurcation and terminal points have non-standard Types, set them to that of parent.</td>
+                            <td>If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 0 indicating &quot;undefined&quot;. If bifurcation and terminal points have non-standard Types, set them to that of parent.</td>
                             </tr>
                             <tr>
                             <td>Sequential Index</td>
