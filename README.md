@@ -114,7 +114,7 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | HBP Morphology Viewer SWC+<sup>8</sup> | .swc | Neuromorpho.Org | Custom | Python | 1 |
 | Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>3</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
-| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply .blend  | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
+| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
 | Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP<sup>8,†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |

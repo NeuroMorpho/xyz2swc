@@ -5,6 +5,7 @@ import numpy as np
 import ast
 import re
 import os
+import pdb
 
 # import pdb
 
@@ -79,10 +80,17 @@ def mesh2swc(inputfile, outputfile, params_file=None):
     # write as swc
     skel.save_swc(outputfile)
 
-    # set TypeIDs
+    # open the just written SWC
     swc_matrix = pd.read_table(outputfile, sep=r"\s+", header=None, comment="#")
     swc_matrix.columns = ["Index", "TypeID", "X", "Y", "Z", "Radius", "ParentIndex"]
+    # set TypeIDs
     swc_matrix.loc[:, "TypeID"] = 0
+    # reindex
+    swc_matrix["Index"] = swc_matrix["Index"] + 1
+    swc_matrix["ParentIndex"] = swc_matrix["ParentIndex"] + 1
+    root_indicies = swc_matrix.index[swc_matrix["ParentIndex"] == 0]
+    swc_matrix.loc[root_indicies, "ParentIndex"] = -1
+
     np.savetxt(outputfile, swc_matrix, fmt="%u %u %f %f %f %f %d")
 
     if os.stat(outputfile).st_size == 0:

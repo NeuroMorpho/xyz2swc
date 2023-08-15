@@ -1,29 +1,47 @@
 import pyvista as pv
-import trimesh as tm
-import os
-from .mesh2swc import mesh2swc
-
-# import pdb
+import numpy as np
 
 
-def vtk2swc(inputfile, outputfile, logdir="./logs", mesh_configfile=None):
-    # intermediate mesh file
-    if not os.path.exists(logdir):
-        os.mkdir(logdir)
-    f = os.path.splitext(os.path.basename(inputfile))[0]
-    meshfile = os.path.join(logdir, f + ".stl")
-
+def vtk2swc(inputfile, outputfile):
     # convert vtk to mesh
     try:
         polydata = pv.read(inputfile)
-        mesh = polydata.extract_surface().triangulate()
-        faces_as_array = mesh.faces.reshape((mesh.n_faces, 4))[:, 1:]
-        tmesh = tm.Trimesh(mesh.points, faces_as_array)
-        dump = tm.exchange.export.export_mesh(tmesh, meshfile)
+        # pv.is_pyvista_dataset(polydata)
+        # extract linesegments from vtk file
+        polylines = []
+        i, offset = 0, 0
+        cc = polydata.lines
+        while i < polydata.n_cells:
+            nn = cc[offset]
+            polylines.append(cc[offset + 1 : offset + 1 + nn])
+            offset += nn + 1
+            i += 1
+        #
+        lines = []
+        for poly in polylines:
+            lines.append(np.column_stack((poly[:-1], poly[1:])))
+        lines = np.vstack(lines)
+        # cells = np.column_stack((np.full(len(lines), 2), lines))
+
+        # check if lines were extracted
+        if lines.shape[1] != 2:
+            return "FAIL"
+        parentID_list = [-1] * polydata.n_points
+        for i in range(0, lines.shape[0]):
+            parentID_list[lines[i][1]] = lines[i][0] + 1
+
+        swc = np.empty([polydata.n_points, 7])
+        swc[:, 0] = range(1, polydata.n_points + 1)
+        swc[:, 1] = [0] * polydata.n_points
+        swc[:, 2:5] = polydata.points
+        swc[:, 5] = [0.5] * polydata.n_points
+        swc[:, 6] = parentID_list
+
+        np.savetxt(outputfile, swc, fmt="%u %u %f %f %f %f %d")
+
+        return "SUCCESS"
+
     except Exception:
         return "FAIL"
 
-    # convert stl to swc
-    conversion_status = mesh2swc(meshfile, outputfile, mesh_configfile)
-
-    return conversion_status
+    # return conversion_status

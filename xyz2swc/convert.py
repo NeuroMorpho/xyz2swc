@@ -176,13 +176,12 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         res = subprocess.run([command], shell=True)
         conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
 
-    elif ending in [".stl", ".obj", "ply", ".blend"]:
+    elif ending in [".stl", ".obj", "ply"]:
         conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
 
     elif ending in [".vtk"]:
         conversion_status = vtk2swc.vtk2swc(inputfile,
-                                            outputfile,
-                                            mesh_configfile=mesh_configfile)
+                                            outputfile)
 
     # -- if input file is already swc
     # -- new standardized output swc file needs to be created (also need to return correction_list to user)
