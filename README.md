@@ -6,15 +6,15 @@ This repository contains the source code for the *xyz2swc* software --- a univer
 <br/>
 
 ## Contents
-[Running online](#Running-xyz2swc-online-Preferred-Method)
-[Running locally](#Running-xyz2swc-locally)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System Requirements](#System-Requirements)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installaion using Docker](#Option-1-Local-installation-using-Docker)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#Option-2-Local-installation-from-scratch)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#Instructions-for-use)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Module management](#Module-management)
-[Standardization checklist](#Standardization-checklist)
-[Supported tools and formats](#Supported-tools-and-formats)
+[Running online](#Running-xyz2swc-online-Preferred-Method)  
+[Running locally](#Running-xyz2swc-locally)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System Requirements](#System-Requirements)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation using Docker](#Option-1-Local-installation-using-Docker)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#Option-2-Local-installation-from-scratch)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#Instructions-for-use)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Module management](#Module-management)  
+[Standardization checklist](#Standardization-checklist)  
+[Supported tools and formats](#Supported-tools-and-formats)  
 
 ---
 <br/>
