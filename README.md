@@ -2,13 +2,12 @@
 
 This repository contains the source code for the *xyz2swc* software --- a universal online service for converting digital reconstructions of neural morphologies into standardized SWC format.
 
----
 <br/>
 
 ## Contents
 [Running online](#Running-xyz2swc-online-Preferred-Method)  
 [Running locally](#Running-xyz2swc-locally)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System Requirements](#System-Requirements)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System requirements](#System-Requirements)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation using Docker](#Option-1-Local-installation-using-Docker)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#Option-2-Local-installation-from-scratch)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#Instructions-for-use)  
@@ -21,11 +20,13 @@ This repository contains the source code for the *xyz2swc* software --- a univer
 
 ## Running *xyz2swc* online [Preferred Method] 
 
-***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at https://neuromorpho.org/xyz2swc/ui/. Demonstration video of the tool is available at https://vimeo.com/853219729?share=copy.
+***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at https://neuromorpho.org/xyz2swc/ui/.
 
 ***Prerequisites:*** The online service is operating system and programming language independent, and requires no local package installation. 
 
-***Instructions for use:*** To convert your digital tracings, simply upload the reconstruction files (either individually or as a zipped archive) and select the “Convert/Standardize” option. The service automatically detects the format of the uploaded files, performs the data conversion, and provides the converted standardized SWC files for download.
+***Instructions for use:*** To convert your digital tracings, simply upload the reconstruction files (either individually or as a zipped archive) and select the “Convert/Standardize” option. The service automatically detects the format of the uploaded files, performs the data conversion, and provides the converted standardized SWC files for download.  
+  
+A demonstration video on how to use the online converter is available at https://vimeo.com/853219729?share=copy.
 
 
 ***Demo Samples:*** For those wanting to quickly test out the service, the `input` folder contains sample files of different types of reconstruction formats, while the `output` folder contains the corresponding standardized SWC files.
@@ -42,7 +43,7 @@ The average runtime to convert and standardize an input file is approximately 15
 
 ## Running *xyz2swc* locally
 
-**NOTE:** Local installation of `xyz2swc` requires considerable experience and effort, and is therefore recommended only for those who might want to go beyond simply using the software (interested developers and code contributors).
+**NOTE:** Local installation of *xyz2swc* requires considerable experience and effort, and is therefore recommended only for those who might want to go beyond simply using the software (interested developers and code contributors).
 
 ### *System Requirements*
 - Hardware: A standard computer with enough RAM to support the in-memory operations.
@@ -54,9 +55,8 @@ Refer to the detailed installation instructions below for other specific softwar
 
 ### *Option 1: Local installation using Docker*
 
-If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:
-
-- `$ docker pull neuromorpho/xyz2swc:latest`
+If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:  
+`$ docker pull neuromorpho/xyz2swc:latest`
 
 You can also build the docker image from scratch using the instructions below. Please note that the system is built and tested for Ubuntu Linux. Other platforms may need adaptions to work.
 
@@ -72,34 +72,32 @@ You can also build the docker image from scratch using the instructions below. P
 
 ### *Option 2: Local installation from scratch*
 
-- *Install Python:* ```$ apt install -y python3```
-Use pip3 to install all necessary Python packages (listed [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/requirements.txt)).
-```$ apt install -y python3-pip```
+- *Install Python:* ```$ apt install -y python3```  
+Use pip3 to install all necessary Python packages (listed [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/requirements.txt)).  
+```$ apt install -y python3-pip```  
 ```$ pip3 install <package-name>```
 
-
 - *Install Neuronland module:* Detailed install instructions for compiling and building the Neuronland app using `g++/gcc` are available [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/neuronland/release_docs).
-- *Install R:* Required only<sup>‡</sup> for converting Amira `.am` format files. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
-
-- *Setting up FIJI:* Required only<sup>‡</sup> for converting SNT `.traces` format files. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
 
 - *Install Node.js:* ``` $ apt install -y nodejs npm ```
 Required for the HBP converter module.
 
+- *<sup>‡</sup>Install R:* Required only for converting Amira `.am` format files. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
 
-- *Install Octave:* ``` $ apt install -y octave ``` 
-Required only<sup>‡</sup> for converting NeuronJ `.ndf`, and TREES Toolbox `.mat`,`.mtr` format files.
+- *<sup>‡</sup>Setting up FIJI:* Required only for converting SNT `.traces` format files. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
 
----
-<sup>‡</sup> Installation required only for converting the specified format(s), and does not impact other *xyz2swc* operations.
+- *<sup>‡</sup>Install Octave:* ``` $ apt install -y octave ```
+Required only for converting NeuronJ `.ndf`, and TREES Toolbox `.mat`,`.mtr` format files.
+
+<sup>‡</sup> Only required for converting the specified format(s), and does not impact other/overall *xyz2swc* operation.
 
 <br/>
 
 ### *Instructions for use*
 
-Navigate to the `xyz2swc` folder and run the converter by executing the python script:
-`$ cd ./xyz2swc` 
-`$ python convert.py`
+Navigate to the `xyz2swc` folder and run the converter by executing the python script:  
+`$ cd ./xyz2swc`  
+`$ python convert.py`  
  
 - Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize)
 - No optional arguments need to be specified.
