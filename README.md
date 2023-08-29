@@ -5,6 +5,19 @@ This repository contains the source code for the *xyz2swc* software --- a univer
 ---
 <br/>
 
+## Contents
+[Running online](#Running-xyz2swc-online-Preferred-Method)
+[Running locally](#Running-xyz2swc-locally)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System Requirements](#System-Requirements)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installaion using Docker](#Option-1-Local-installation-using-Docker)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#Option-2-Local-installation-from-scratch)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#Instructions-for-use)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Module management](#Module-management)
+[Standardization checklist](#Standardization-checklist)
+[Supported tools and formats](#Supported-tools-and-formats)
+
+---
+<br/>
 
 ## Running *xyz2swc* online [Preferred Method] 
 
@@ -37,6 +50,8 @@ The average runtime to convert and standardize an input file is approximately 15
 
 Refer to the detailed installation instructions below for other specific software requirements for each of the *xyz2swc* modules.
 
+<br/>
+
 ### *Option 1: Local installation using Docker*
 
 If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:
@@ -53,68 +68,95 @@ You can also build the docker image from scratch using the instructions below. P
 
 **Total estimated time for local installation using Docker:** 15-30 minutes, excluding download time for FIJI.
 
+<br/>
+
 ### *Option 2: Local installation from scratch*
 
-1. **Install Neuronland module:** Detailed install instructions for compiling and building the Neuronland app using `g++/gcc` are available [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/neuronland/release_docs).
+- *Install Python:* ```$ apt install -y python3```
+Use pip3 to install all necessary Python packages (listed [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/requirements.txt)).
+```$ apt install -y python3-pip```
+```$ pip3 install <package-name>```
 
-2. **Install R:** Conversion of Amira `.am` format files require the use of R packages and libraries. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
 
-3. **Setting up FIJI:** Conversion of SNT `.traces` format files require the FIJI (FIJI Is Just ImageJ) application. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
+- *Install Neuronland module:* Detailed install instructions for compiling and building the Neuronland app using `g++/gcc` are available [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/neuronland/release_docs).
+- *Install R:* Required only<sup>‡</sup> for converting Amira `.am` format files. Install instructions can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/am/release_docs/Install_Instructions_R.md).
 
-4. **Setting up HBP Morphology Viewer:**
-The HBP converter module requires Node.js and npm: 
-`$ apt-get -y install nodejs npm`
+- *Setting up FIJI:* Required only<sup>‡</sup> for converting SNT `.traces` format files. Instructions to download and setup the portable version of FIJI can be found [here](https://github.com/NeuroMorpho/xyz2swc/tree/main/modules/snt/release_docs/Install_Instructions_FIJI.md).
 
-5. **Install Python:** 
-To install the latest version of Python:
-`$ sudo apt install python3`
-Use pip3 to install the necessary package modules:
-`$ sudo apt install python3-pip`
-`$ pip3 install os pdb numpy pandas sys math statistics`
+- *Install Node.js:* ``` $ apt install -y nodejs npm ```
+Required for the HBP converter module.
 
-### Demo 
+
+- *Install Octave:* ``` $ apt install -y octave ``` 
+Required only<sup>‡</sup> for converting NeuronJ `.ndf`, and TREES Toolbox `.mat`,`.mtr` format files.
+
+---
+<sup>‡</sup> Installation required only for converting the specified format(s), and does not impact other *xyz2swc* operations.
+
+<br/>
+
+### *Instructions for use*
+
 Navigate to the `xyz2swc` folder and run the converter by executing the python script:
 `$ cd ./xyz2swc` 
 `$ python convert.py`
  
+- Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize)
 - No optional arguments need to be specified.
 - The program automatically searches and imports the reconstruction files from `./input/to_convert/` folder. Demo sample file are provided in this folder.
-- On successful conversion the SWC files are saved into the `./output/converted` folder. The folder also contains a `converted_checklist.csv` for a quick inspection of the conversion status of each file.
+- On successful conversion the SWC files are saved into the `./output/converted/` folder. The folder also contains a `converted_checklist.csv` for a quick inspection of the conversion status of each file.
 
-The following checks are done, both for checked files as well as for the converted files:
+<br/>
 
-| **Check**  | **Action/Correction**  |
-|---|---|
-| Missing Field  | If the SWC points matrix does not have seven columns, then return an error. All further checks are omitted.  |
-| Number of Lines  | Generate an error if no samples are detected. All further checks are omitted.  If fewer than 20 lines, generate a warning to check file integrity.   |
-| Number of soma Samples  | Generate warning if no soma samples detected.  |
-| Invalid Parent  | If the Parent points to an Index value that does not exist, then make the sample with the invalid Parent a root point, and generate a warning to check file integrity.  |
-| Index/Parent Integer  | If Index and/or Parent are float-formatted integer (e.g., “1.00”), format them as integers. If they are non-integer values (e.g., “1.34”) or non-numerical entries (e.g, “abc”), generate an error.  |
-| XYZ Double  | Ensure X, Y, and Z coordinates are float/double values. Any NaN or N/A values detected in the ASCII text file are treated as 0.0. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
-| Radius Positive Double  | Ensure sample Radius is a double/float value. If radius is negative, zero, NaN, or N/A, then set to 0.5. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
-| Non-Standard Type  | If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 0 indicating 'undefined'. If bifurcation and terminal points have non-standard Types, set them to that of parent.  |
-| Sequential Index  | If the Index values are not in sequential order (starting from 1), then sort and reset Index and Parent numbering. |
-| Sorted Order  | If parent samples are referred to before being defined, then sort and reset Index and Parent numbering. Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
-| Soma Contours  | Detect soma contour(s), and replace each with a single point. |
+### *Module management*
+- Python converter modules are located in `./xyz2swc/utils/` folder.
+- Non-python converter modules are located in `./modules/` folder.
+- Use [`convert.single()`](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/convert.py#L23) for convenient top-level to include/exclude individual converter modules without impacting overall service operation.
+- To add support for a new morphology format, it is recommend to create a new Python converter module and simply import it via `convert.single()`.
+    - Details of how and where to import the new module can be found [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/convert.py#L185).
+    - A reference template for the new module is provided [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/utils/template_module.py).
 
 
-### Instructions for use
-Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize), and execute the `convert.py` script as described in the [Demo](#Demo) above. 
+
+
 
 ---
+<br/>
+
+## Standardization checklist
+The following checks are done, both for checked files as well as for the converted files:
+
+| **Check**  | **Action/Correction**  |
+|---|---|
+| Missing Field  | If the SWC points matrix does not have seven columns, then return an error. All further checks are omitted.  |
+| Number of Lines  | Generate an error if no samples are detected. All further checks are omitted.  If fewer than 20 lines, generate a warning to check file integrity.   |
+| Number of soma Samples  | Generate warning if no soma samples detected.  |
+| Invalid Parent  | If the Parent points to an Index value that does not exist, then make the sample with the invalid Parent a root point, and generate a warning to check file integrity.  |
+| Index/Parent Integer  | If Index and/or Parent are float-formatted integer (e.g., “1.00”), format them as integers. If they are non-integer values (e.g., “1.34”) or non-numerical entries (e.g, “abc”), generate an error.  |
+| XYZ Double  | Ensure X, Y, and Z coordinates are float/double values. Any NaN or N/A values detected in the ASCII text file are treated as 0.0. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
+| Radius Positive Double  | Ensure sample Radius is a double/float value. If radius is negative, zero, NaN, or N/A, then set to 0.5. Generate a warning to check file integrity, and add a footer to the file to note inserted values. |
+| Non-Standard Type  | If Type is float-formatted integer, format as integer. If it is non-integer value or non-numerical entry, change to Type 0 indicating 'undefined'. If bifurcation and terminal points have non-standard Types, set them to that of parent.  |
+| Sequential Index  | If the Index values are not in sequential order (starting from 1), then sort and reset Index and Parent numbering. |
+| Sorted Order  | If parent samples are referred to before being defined, then sort and reset Index and Parent numbering. Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
+| Soma Contours  | Detect soma contour(s), and replace each with a single point. |
+
+
+
+---
+<br/>
 
 ## Supported tools and formats
 | **Software Application** | **File Format** | **Test Data Source** | **Converter Module(s)** | **Programming Language(s)** | **No. of Variations Supported** |
 | --- | --- | --- | --- | --- | --- |
-| Amira<sup>2,22</sup> *(ThermoFisher, RRID:SCR\_007353)* | .am | Neuromorpho.Org | natverse<sup>16</sup> | R | 3 |
+| Amira<sup>2,22</sup> *(ThermoFisher, RRID:SCR\_007353)* | .am | Neuromorpho.Org | natverse<sup>16</sup> | R | 3 |
 | Arbor<sup>20</sup> | .swc | Neuromorpho.Org | NeuronLand | C++ | 1 |
 | ESWC<sup>18</sup> | .eswc | Neuromorpho.Org | Custom | Python | 2 |
 | Eutectics<sup>4</sup> | .nts | Neuromorpho.Org | NeuronLand; Custom | C++; Python | 4 |
 | Genesis<sup>12</sup> | .p | senselab.med.yale.edu/ModelDB/ | NeuronLand | C++ | 2 |
 | HBP Morphology Viewer SWC+<sup>8</sup> | .swc | Neuromorpho.Org | Custom | Python | 1 |
-| Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
+| Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>3</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
-| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 4<sup>#</sup> |
+| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 3<sup>#</sup> |
 | Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP<sup>8,†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |
@@ -124,14 +166,14 @@ Simply replace the demo example files in the `./input/to_convert/` folder with t
 | NEURON<sup>10,11</sup> | .hoc | Neuromorpho.Org | Custom | Python | 11 |
 | NeuroZoom<sup>24</sup> | .swc | Neuromorpho.Org | NeuronLand | C++ | 2 |
 | NINDS3D<sup>25</sup> | .anat | Neuromorpho.Org | NeuronLand | C++ | 1 |
-| PSICS<sup>19</sup> *(RRID: SCR\_014159)* | .xml | psics.org/examples.html | NeuronLand | C++ | 1 |
+| PSICS<sup>19</sup> *(RRID: SCR\_014159)* | .xml | psics.org/examples.html | NeuronLand | C++ | 1 |
 | PyKNOSSOS<sup>21</sup> | .nmx | Neuromorpho.Org | Custom | Python | 1 |
 | SNT TRACES<sup>5,6</sup> | .traces | Neuromorpho.Org | FIJI<sup>17</sup> (SNT plugin<sup>11</sup>); Custom | Java; Python | 2 |
 | TREES Toolbox<sup>9</sup> | .mtr | Neuromorpho.Org | TREES Toolbox<sup>†</sup> | Octave | 1 |
 | TREES Toolbox | .mat | Neuromorpho.Org | TREES Toolbox<sup>†</sup> | Octave | 2 |
 | Visualization Toolkit<sup>26</sup> | .vtk | Neuromorpho.Org | skeletor<sup>†</sup> | Python | 2 |
 
-\*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format. \*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files<sup>15</sup>, and .nml1 for NeuroML v1 files<sup>14,27</sup>. <sup>†</sup>Customized implementation. <sup>#</sup>Supports triangle mesh formats (trimsh.org/index.html).
+\*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format. \*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files<sup>15</sup>, and .nml1 for NeuroML v1 files<sup>14,27</sup>. <sup>†</sup>Customized implementation. <sup>#</sup>Supports triangle mesh formats (trimsh.org/index.html).
 
 ## References
 1.	Glaser, J. R. & Glaser, E. M. Neuron imaging with neurolucida — A PC-based system for image combining microscopy. Comput. Med. Imaging Graph. 14, 307–317 (1990).

@@ -34,7 +34,7 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         verbose:            [bool]      Toggle to display/suppress console output.
 
     Returns:
-        conversion_status:  [string]    'SUCCESS' if conversion had no errors; 'FAIL' if they were errors; 'IGNORE' if format currently not supported; 'STANDARDIZED' if input is SWC
+        conversion_status:  [string]    'SUCCESS' if conversion had no errors; 'FAIL' if there were errors; 'IGNORE' if format currently not supported; 'STANDARDIZED' if input is SWC
         correction_list_df: [pandas.df] If the input file was a SWC a list of the attempted corrections is generated; Else returns a 'None' value.
     """
 
@@ -153,10 +153,10 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
 
     elif ending in [".mtr", ".mat"]:
         octave.addpath("/app/modules/mtr")
-        #try:
+        # try:
         octave.mtr2swc(inputfile, outputfile)
         conversion_status = "SUCCESS"
-        #except Exception
+        # except Exception
         #    conversion_status = "FAIL"
 
     elif ending == ".traces":
@@ -180,8 +180,21 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
 
     elif ending in [".vtk"]:
-        conversion_status = vtk2swc.vtk2swc(inputfile,
-                                            outputfile)
+        conversion_status = vtk2swc.vtk2swc(inputfile, outputfile)
+
+    # ***************************************************
+    # **Import and insert any new converter module here**
+    # Function call must:
+    #     - be nested within the 'elif' block
+    #     - accept two input arguments 'inputfile' and 'outptufile'
+    #     - return 'conversion_status' flag
+
+    # Example:
+    # ---------------------------------------------------
+    # elif ending in [".xyz"]:                                                        # replace .xyz with the new format extension
+    #     from utils import template_module                                           # import the module
+    #     conversion_status = template_module.converter_func(inputfile, outputfile)
+    # ***************************************************
 
     # -- if input file is already swc
     # -- new standardized output swc file needs to be created (also need to return correction_list to user)

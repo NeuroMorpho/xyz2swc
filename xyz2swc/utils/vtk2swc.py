@@ -3,7 +3,17 @@ import numpy as np
 
 
 def vtk2swc(inputfile, outputfile):
-    # convert vtk to mesh
+    """
+    Function to convert a .vtk file into a .swc file.
+
+    Required arguments:
+        inputfile:          [string]    Path of the reconstruction format to convert.
+        outputfile:         [string]    Path of converted SWC file.
+
+    Returns:
+        conversion_status:  [string]    'SUCCESS' if conversion had no errors; 'FAIL' if there were errors
+    """
+
     try:
         polydata = pv.read(inputfile)
         # pv.is_pyvista_dataset(polydata)
