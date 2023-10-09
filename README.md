@@ -1,33 +1,43 @@
 # *xyz2swc*
 
-This repository contains the source code for the *xyz2swc* software --- a universal online service for converting digital reconstructions of neural morphologies into standardized SWC format.
+This repository contains the source code for the *xyz2swc* software — a universal online service for converting digital reconstructions of neural morphologies into standardized SWC format.
+
+## Features (tl;dr)
+
+- Online file converter app (accessible at <https://neuromorpho.org/xyz2swc/ui/>, and is our preferred method for using the service)
+- Supports 26 different reconstruction formats (and 72 variations), including skeletonization from 3D mesh formats.  
+- Verify and correct non-compliant SWC files to meet standard specification [(v1.0.0)](https://swc-specification.readthedocs.io).  
+- [API](https://neuromorpho.org/xyz2swc/docs) provides programmatic access to all features of the online service.  
+- Options to install and run locally, with ability to update/add/remove individual converter modules.
 
 <br/>
 
 ## Contents
-[Running online](#Running-xyz2swc-online-Preferred-Method)  
-[Running locally](#Running-xyz2swc-locally)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System requirements](#System-Requirements)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation using Docker](#Option-1-Local-installation-using-Docker)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#Option-2-Local-installation-from-scratch)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#Instructions-for-use)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Module management](#Module-management)  
-[Standardization checklist](#Standardization-checklist)  
-[Supported tools and formats](#Supported-tools-and-formats)  
+
+[Running online](#running-xyz2swc-online-preferred-method)
+[Running locally](#running-xyz2swc-locally)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[System requirements](#system-requirements)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation using Docker](#option-1-local-installation-using-docker)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installation from scratch](#option-2-local-installation-from-scratch)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Instructions for use](#instructions-for-use)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Module management](#module-management)  
+[Standardization checklist](#standardization-checklist)  
+[Supported tools and formats](#supported-tools-and-formats)  
 
 ---
 <br/>
 
-## Running *xyz2swc* online [Preferred Method] 
+## Running *xyz2swc* online [Preferred Method]
 
-***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at https://neuromorpho.org/xyz2swc/ui/.
+***Accessing the service:*** The *xyz2swc* software is available as a free and ready-to-use online service. It is accessible through any common internet browser via a user friendly web-based graphical interface at <https://neuromorpho.org/xyz2swc/ui/>.
 
-***Prerequisites:*** The online service is operating system and programming language independent, and requires no local package installation. 
+***Prerequisites:*** The online service is operating system and programming language independent, and requires no local package installation.
 
-***Instructions for use:*** To convert your digital tracings, simply upload the reconstruction files (either individually or as a zipped archive) and select the “Convert/Standardize” option. The service automatically detects the format of the uploaded files, performs the data conversion, and provides the converted standardized SWC files for download.  
+***Instructions for use:*** To convert your digital tracings, simply upload the reconstruction files (either individually or as a zipped archive) and select the “Convert/Standardize” option. The service automatically detects the format of the uploaded files, performs the data conversion, and provides the converted standardized SWC files for download. All supported formats listed [here](#supported-tools-and-formats).
   
-A demonstration video on how to use the online converter is available at https://vimeo.com/853219729?share=copy.
+A demonstration video on how to use the online converter is available at <https://vimeo.com/853219729?share=copy>.
 
+A complete list of all supported formats is provided [below](#supported-tools-and-formats).
 
 ***Demo Samples:*** For those wanting to quickly test out the service, the `input` folder contains sample files of different types of reconstruction formats, while the `output` folder contains the corresponding standardized SWC files.
 
@@ -35,19 +45,19 @@ The average runtime to convert and standardize an input file is approximately 15
 
 ***Results in the manuscript can be replicated:*** by downloading the 'original' digital reconstruction files available on the NeuroMorpho.Org (version 8.4) repository, and converting them using the online service. The generated log files can be used to determine the number (percentage) of files successfully converted.  
 
-***API:*** Instructions to programmatically access the online service are available at https://neuromorpho.org/xyz2swc/docs.
+***API:*** Instructions to programmatically access the online service are available at <https://neuromorpho.org/xyz2swc/docs>.
 
 ---
 <br/>
-
 
 ## Running *xyz2swc* locally
 
 **NOTE:** Local installation of *xyz2swc* requires considerable experience and effort, and is therefore recommended only for those who might want to go beyond simply using the software (interested developers and code contributors).
 
 ### *System Requirements*
+
 - Hardware: A standard computer with enough RAM to support the in-memory operations.
-- Operating System: The package is currently only supported for Linux and has been tested on Ubuntu 18.04 LTS. 
+- Operating System: The package is currently only supported for Linux and has been tested on Ubuntu 18.04 LTS.
 
 Refer to the detailed installation instructions below for other specific software requirements for each of the *xyz2swc* modules.
 
@@ -55,7 +65,7 @@ Refer to the detailed installation instructions below for other specific softwar
 
 ### *Option 1: Local installation using Docker*
 
-If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image https://hub.docker.com/r/neuromorpho/xyz2swc - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:  
+If you need to install and run the service locally (e.g., on a private server) we recommend making use of the published Docker image <https://hub.docker.com/r/neuromorpho/xyz2swc> - which which contains the latest stable version of the source code, libraries, modules, and all other needed dependencies. You can pull the docker image using the command below:  
 `$ docker pull neuromorpho/xyz2swc:latest`
 
 You can also build the docker image from scratch using the instructions below. Please note that the system is built and tested for Ubuntu Linux. Other platforms may need adaptions to work.
@@ -64,7 +74,7 @@ You can also build the docker image from scratch using the instructions below. P
 - Install [docker](https://docs.docker.com/get-docker/)
 - Build the docker image using docker compose: `$ docker compose up`
 - Wait for build to complete, this usually takes 5-10 minutes
-- Once build is completed and docker image is deployed, UI will be accessible at port 8001 of localhost: http://localhost:8001
+- Once build is completed and docker image is deployed, UI will be accessible at port 8001 of localhost: <http://localhost:8001>
 
 **Total estimated time for local installation using Docker:** 15-30 minutes, excluding download time for FIJI.
 
@@ -89,7 +99,7 @@ Required for the HBP converter module.
 - *<sup>‡</sup>Install Octave:* ``` $ apt install -y octave ```
 Required only for converting NeuronJ `.ndf`, and TREES Toolbox `.mat`,`.mtr` format files.
 
-<sup>‡</sup> Only required for converting the specified format(s), and does not impact other/overall *xyz2swc* operation.
+<sup>‡</sup> Only required for converting the specified format(s), and does not impact other/overall *xyz2swc* operation. A complete list of all supported formats, with their converter modules and corresponding programming language is provided [below](#supported-tools-and-formats).
 
 <br/>
 
@@ -98,7 +108,7 @@ Required only for converting NeuronJ `.ndf`, and TREES Toolbox `.mat`,`.mtr` for
 Navigate to the `xyz2swc` folder and run the converter by executing the python script:  
 `$ cd ./xyz2swc`  
 `$ python convert.py`  
- 
+
 - Simply replace the demo example files in the `./input/to_convert/` folder with the files you want to convert (or standardize)
 - No optional arguments need to be specified.
 - The program automatically searches and imports the reconstruction files from `./input/to_convert/` folder. Demo sample file are provided in this folder.
@@ -107,21 +117,19 @@ Navigate to the `xyz2swc` folder and run the converter by executing the python s
 <br/>
 
 ### *Module management*
+
 - Python converter modules are located in `./xyz2swc/utils/` folder.
 - Non-python converter modules are located in `./modules/` folder.
 - Use [`convert.single()`](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/convert.py#L23) for convenient top-level to include/exclude individual converter modules without impacting overall service operation.
 - To add support for a new morphology format, it is recommend to create a new Python converter module and simply import it via `convert.single()`.
-    - Details of how and where to import the new module can be found [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/convert.py#L185).
-    - A reference template for the new module is provided [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/utils/template_module.py).
-
-
-
-
+  - Details of how and where to import the new module can be found [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/convert.py#L185).
+  - A reference template for the new module is provided [here](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/utils/template_module.py).
 
 ---
 <br/>
 
 ## Standardization checklist
+
 The following checks are done, both for checked files as well as for the converted files:
 
 | **Check**  | **Action/Correction**  |
@@ -138,12 +146,11 @@ The following checks are done, both for checked files as well as for the convert
 | Sorted Order  | If parent samples are referred to before being defined, then sort and reset Index and Parent numbering. Sort indices to ensure that the first sample in the file is a root point. If no sample point is a root, generate an error.  |
 | Soma Contours  | Detect soma contour(s), and replace each with a single point. |
 
-
-
 ---
 <br/>
 
 ## Supported tools and formats
+
 | **Software Application** | **File Format** | **Test Data Source** | **Converter Module(s)** | **Programming Language(s)** | **No. of Variations Supported** |
 | --- | --- | --- | --- | --- | --- |
 | Amira<sup>2,22</sup> *(ThermoFisher, RRID:SCR\_007353)* | .am | Neuromorpho.Org | natverse<sup>16</sup> | R | 3 |
@@ -154,7 +161,7 @@ The following checks are done, both for checked files as well as for the convert
 | HBP Morphology Viewer SWC+<sup>8</sup> | .swc | Neuromorpho.Org | Custom | Python | 1 |
 | Imaris *(Oxford Instruments,  RRID:SCR\_007370)* | .ims | Neuromorpho.Org | NeuronLand (HDF5 Library) | C++ | 1 |
 | KNOSSOS<sup>3</sup> | .nml\* | Neuromorpho.Org | Custom | Python | 1 |
-| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply | http://fafb-ffn1.storage.googleapis.com/data.html | skeletor<sup>23</sup> | Python | 3<sup>#</sup> |
+| Neuroglancer  (RRID:SCR_015631) | .stl .obj .ply | <http://fafb-ffn1.storage.googleapis.com/data.html> | skeletor<sup>23</sup> | Python | 3<sup>#</sup> |
 | Neurolucida<sup>1,13</sup> | .asc | Neuromorpho.Org | NeuronLand;HBP<sup>8,†</sup> | C++; Node.js | 7 |
 | Neurolucida | .dat | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 3 |
 | Neurolucida | .nrx | Neuromorpho.Org | NeuronLand; HBP<sup>†</sup> | C++; Node.js | 1 |
@@ -171,37 +178,44 @@ The following checks are done, both for checked files as well as for the convert
 | TREES Toolbox | .mat | Neuromorpho.Org | TREES Toolbox<sup>†</sup> | Octave | 2 |
 | Visualization Toolkit<sup>26</sup> | .vtk | Neuromorpho.Org | skeletor<sup>†</sup> | Python | 2 |
 
-\*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format. \*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files<sup>15</sup>, and .nml1 for NeuroML v1 files<sup>14,27</sup>. <sup>†</sup>Customized implementation. <sup>#</sup>Supports triangle mesh formats (trimsh.org/index.html).
+\*KNOSSOS .nml format while being an XML file is not compliant with the NeuroML .nml format.  
+\*\*NeuroML recommends using .cell.nml for NeuroML v2 cell files<sup>15</sup>, and .nml1 for NeuroML v1 files<sup>14,27</sup>.  
+<sup>†</sup>Customized implementation.  
+<sup>#</sup>Supports triangle mesh formats (trimsh.org/index.html). Option to configure default parameter values used during skeletonization by using [mesh2swc_config.txt](https://github.com/NeuroMorpho/xyz2swc/blob/main/xyz2swc/utils/mesh2swc_config.txt). If using the web-interface upload config file along with the mesh file(s), if running locally place in the same input-folder as your mesh file(s).
+
+---
+<br/>
 
 ## References
-1.	Glaser, J. R. & Glaser, E. M. Neuron imaging with neurolucida — A PC-based system for image combining microscopy. Comput. Med. Imaging Graph. 14, 307–317 (1990).
-2.	Stalling, D., Westerhoff, M. & Hege, H.-C. Amira: A Highly Interactive System for Visual Data Analysis. in 749–767 (Elsevier, 2005). doi:10.1016/B978-012387582-2/50040-X.
-3.	Helmstaedter, M., Briggman, K. L. & Denk, W. High-accuracy neurite reconstruction for high-throughput neuroanatomy. Nat. Neurosci. 14, 1081–1088 (2011).
-4.	Capowski, J. J. An automatic neuron reconstruction system. J. Neurosci. Methods 8, 353–364 (1983).
-5.	Ferreira, T. A. et al. Neuronal morphometry directly from bitmap images. Nat. Methods 11, 982–984 (2014).
-6.	Arshadi, C., Günther, U., Eddison, M., Harrington, K. I. S. & Ferreira, T. A. SNT: a unifying toolbox for quantification of neuronal anatomy. Nat. Methods 18, 374–377 (2021).
-7.	Meijering, E. et al. Design and validation of a tool for neurite tracing and analysis in fluorescence microscopy images. Cytometry A 58A, 167–176 (2004).
-8.	Bakker, R. & Tiesinga, P. Web-based neuron morphology viewer as an aid to develop new standards for neuron morphology file formats. Front. Neuroinformatics 10, (2016).
-9.	Cuntz, H., Forstner, F., Borst, A. & Häusser, M. The TREES Toolbox—Probing the Basis of Axonal and Dendritic Branching. Neuroinformatics 9, 91–96 (2011).
-10.	Carnevale, N. T. & Hines, M. L. The NEURON Book. (Cambridge University Press, 2006).
-11.	Hines, M. L. & Carnevale, N. T. The NEURON simulation environment. Neural Comput. 9, 1179–1209 (1997).
-12.	Bower, J. M. & Beeman, D. The Book of GENESIS: Exploring Realistic Neural Models with the GEneral NEural SImulation System. (Springer Science & Business Media, 2012).
+
+1. Glaser, J. R. & Glaser, E. M. Neuron imaging with neurolucida — A PC-based system for image combining microscopy. Comput. Med. Imaging Graph. 14, 307–317 (1990).
+2. Stalling, D., Westerhoff, M. & Hege, H.-C. Amira: A Highly Interactive System for Visual Data Analysis. in 749–767 (Elsevier, 2005). doi:10.1016/B978-012387582-2/50040-X.
+3. Helmstaedter, M., Briggman, K. L. & Denk, W. High-accuracy neurite reconstruction for high-throughput neuroanatomy. Nat. Neurosci. 14, 1081–1088 (2011).
+4. Capowski, J. J. An automatic neuron reconstruction system. J. Neurosci. Methods 8, 353–364 (1983).
+5. Ferreira, T. A. et al. Neuronal morphometry directly from bitmap images. Nat. Methods 11, 982–984 (2014).
+6. Arshadi, C., Günther, U., Eddison, M., Harrington, K. I. S. & Ferreira, T. A. SNT: a unifying toolbox for quantification of neuronal anatomy. Nat. Methods 18, 374–377 (2021).
+7. Meijering, E. et al. Design and validation of a tool for neurite tracing and analysis in fluorescence microscopy images. Cytometry A 58A, 167–176 (2004).
+8. Bakker, R. & Tiesinga, P. Web-based neuron morphology viewer as an aid to develop new standards for neuron morphology file formats. Front. Neuroinformatics 10, (2016).
+9. Cuntz, H., Forstner, F., Borst, A. & Häusser, M. The TREES Toolbox—Probing the Basis of Axonal and Dendritic Branching. Neuroinformatics 9, 91–96 (2011).
+10. Carnevale, N. T. & Hines, M. L. The NEURON Book. (Cambridge University Press, 2006).
+11. Hines, M. L. & Carnevale, N. T. The NEURON simulation environment. Neural Comput. 9, 1179–1209 (1997).
+12. Bower, J. M. & Beeman, D. The Book of GENESIS: Exploring Realistic Neural Models with the GEneral NEural SImulation System. (Springer Science & Business Media, 2012).
 (2022).
-13.	Sullivan, A. E. et al. A Comprehensive, FAIR File Format for Neuroanatomical Structure Modeling. Neuroinformatics 20, 221–240 (2022).
-14.	Gleeson, P. et al. NeuroML: A Language for Describing Data Driven Models of Neurons and Networks with a High Degree of Biological Detail. PLOS Comput. Biol. 6, e1000815 (2010).
-15.	Cannon, R. C. et al. LEMS: a language for expressing complex biological models in concise and hierarchical form and its use in underpinning NeuroML 2. Front. Neuroinformatics 8, (2014).
-16.	Bates, A. S. et al. The natverse, a versatile toolbox for combining and analysing neuroanatomical data. eLife 9, e53350 (2020).
-17.	Schindelin, J. et al. Fiji: an open-source platform for biological-image analysis. Nat. Methods 9, 676–682 (2012).
-18.	Nanda, S. et al. Design and implementation of multi-signal and time-varying neural reconstructions. Sci. Data 5, 170207 (2018).
-19.	Cannon, R. C., O’Donnell, C. & Nolan, M. F. Stochastic Ion Channel Gating in Dendritic Neurons: Morphology Dependence and Probabilistic Synaptic Activation of Dendritic Spikes. PLOS Comput. Biol. 6, e1000886 (2010).
-20.	Mátyás, F., Freund, T. F. & Gulyás, A. I. Convergence of excitatory and inhibitory inputs onto CCK-containing basket cells in the CA1 area of the rat hippocampus. Eur. J. Neurosci. 19, 1243–1256 (2004).
-21.	Wanner, A. A., Genoud, C. & Friedrich, R. W. 3-dimensional electron microscopic imaging of the zebrafish olfactory bulb and dense reconstruction of neurons. Sci. Data 3, 160100 (2016).
-22.	Dercksen, V. J., Hege, H.-C. & Oberlaender, M. The Filament Editor: An Interactive Software Environment for Visualization, Proof-Editing and Analysis of 3D Neuron Morphology. Neuroinformatics 12, 325–339 (2014).
-23.	Schlegel, P. & Kazimiers, T. schlegelp/skeletor: Version 1.1.0. (2021) doi:10.5281/zenodo.5138552.
-24.	Nimchinsky, E. A., Hof, P. R., Young, W. G., Bloom, F. E. & Morrison, J. H. NeuroZoom software: Development, validation, and neurobiological applications. FASEB J. 12, (1998).
-25.	Cullheim, S., Fleshman, J. W., Glenn, L. L. & Burke, R. E. Membrane area and dendritic structure in type-identified triceps surae alpha motoneurons. J. Comp. Neurol. 255, 68–81 (1987).
-26.	Schroeder, W. J., Martin, K. W. & Lorensen, W. E. The Visualization Toolkit. (Kitware, 2006).
-27.	Crook, S., Gleeson, P., Howell, F., Svitak, J. & Silver, R. A. MorphML: Level 1 of the NeuroML Standards for Neuronal Morphology Data and Model Specification. Neuroinformatics 5, 96–104 (2007).
-28.	Langhammer, C. G. et al. Automated Sholl analysis of digitized neuronal morphology at multiple scales: Whole-cell Sholl analysis vs. Sholl analysis of arbor sub-regions. Cytom. Part J. Int. Soc. Anal. Cytol. 77, 1160–1168 (2010).
+13. Sullivan, A. E. et al. A Comprehensive, FAIR File Format for Neuroanatomical Structure Modeling. Neuroinformatics 20, 221–240 (2022).
+14. Gleeson, P. et al. NeuroML: A Language for Describing Data Driven Models of Neurons and Networks with a High Degree of Biological Detail. PLOS Comput. Biol. 6, e1000815 (2010).
+15. Cannon, R. C. et al. LEMS: a language for expressing complex biological models in concise and hierarchical form and its use in underpinning NeuroML 2. Front. Neuroinformatics 8, (2014).
+16. Bates, A. S. et al. The natverse, a versatile toolbox for combining and analysing neuroanatomical data. eLife 9, e53350 (2020).
+17. Schindelin, J. et al. Fiji: an open-source platform for biological-image analysis. Nat. Methods 9, 676–682 (2012).
+18. Nanda, S. et al. Design and implementation of multi-signal and time-varying neural reconstructions. Sci. Data 5, 170207 (2018).
+19. Cannon, R. C., O’Donnell, C. & Nolan, M. F. Stochastic Ion Channel Gating in Dendritic Neurons: Morphology Dependence and Probabilistic Synaptic Activation of Dendritic Spikes. PLOS Comput. Biol. 6, e1000886 (2010).
+20. Mátyás, F., Freund, T. F. & Gulyás, A. I. Convergence of excitatory and inhibitory inputs onto CCK-containing basket cells in the CA1 area of the rat hippocampus. Eur. J. Neurosci. 19, 1243–1256 (2004).
+21. Wanner, A. A., Genoud, C. & Friedrich, R. W. 3-dimensional electron microscopic imaging of the zebrafish olfactory bulb and dense reconstruction of neurons. Sci. Data 3, 160100 (2016).
+22. Dercksen, V. J., Hege, H.-C. & Oberlaender, M. The Filament Editor: An Interactive Software Environment for Visualization, Proof-Editing and Analysis of 3D Neuron Morphology. Neuroinformatics 12, 325–339 (2014).
+23. Schlegel, P. & Kazimiers, T. schlegelp/skeletor: Version 1.1.0. (2021) doi:10.5281/zenodo.5138552.
+24. Nimchinsky, E. A., Hof, P. R., Young, W. G., Bloom, F. E. & Morrison, J. H. NeuroZoom software: Development, validation, and neurobiological applications. FASEB J. 12, (1998).
+25. Cullheim, S., Fleshman, J. W., Glenn, L. L. & Burke, R. E. Membrane area and dendritic structure in type-identified triceps surae alpha motoneurons. J. Comp. Neurol. 255, 68–81 (1987).
+26. Schroeder, W. J., Martin, K. W. & Lorensen, W. E. The Visualization Toolkit. (Kitware, 2006).
+27. Crook, S., Gleeson, P., Howell, F., Svitak, J. & Silver, R. A. MorphML: Level 1 of the NeuroML Standards for Neuronal Morphology Data and Model Specification. Neuroinformatics 5, 96–104 (2007).
+28. Langhammer, C. G. et al. Automated Sholl analysis of digitized neuronal morphology at multiple scales: Whole-cell Sholl analysis vs. Sholl analysis of arbor sub-regions. Cytom. Part J. Int. Soc. Anal. Cytol. 77, 1160–1168 (2010).
 
 ---
