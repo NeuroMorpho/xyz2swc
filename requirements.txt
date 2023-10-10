@@ -13,3 +13,4 @@ skeletor == 1.2.3
 trimesh == 3.22.5
 pyvista == 0.41.1
 oct2py == 5.6.0
+fast-simplification == 0.1.2

@@ -177,7 +177,7 @@ def single(inputfile, outputfile=None, logdir="./logs", mesh_configfile=None, ve
         conversion_status = "SUCCESS" if (res.returncode == 0) else "FAIL"
 
     elif ending in [".stl", ".obj", "ply"]:
-        conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, mesh_configfile)
+        conversion_status = mesh2swc.mesh2swc(inputfile, outputfile, logdir, mesh_configfile)
 
     elif ending in [".vtk"]:
         conversion_status = vtk2swc.vtk2swc(inputfile, outputfile)
