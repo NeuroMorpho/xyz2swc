@@ -23,7 +23,7 @@ def break_loop(swc_matrix):
 
 def check_for_loop(swc_matrix, row_of_interest, start_chain_at_parent, tree_traversed):
     if row_of_interest == start_chain_at_parent:
-        return True, row_of_interest
+        return True, [row_of_interest]
     else:
         chain_elements = [row_of_interest, start_chain_at_parent]
         Parent_exists = True
