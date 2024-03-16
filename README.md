@@ -1,8 +1,8 @@
-# *xyz2swc*
+# xyz2swc
 
 This repository contains the source code for the *xyz2swc* software — a universal online service for converting digital reconstructions of neural morphologies into standardized SWC format.
 
-## Features (tl;dr)
+## Features
 
 - Online file converter app (accessible at <https://neuromorpho.org/xyz2swc/ui/>, and is our preferred method for using the service)
 - Supports 26 different reconstruction formats (and 72 variations), including skeletonization from 3D mesh formats.  
