@@ -1,4 +1,4 @@
-version: '3.9'
+name: xyz2swc
 
 services:
   xyz1:
@@ -12,7 +12,7 @@ services:
   xyz2:
     build: .
     ports:
-      - "8003:8001"
+      - "8002:8001"
     volumes:
       - data_volume:/app/data/
     restart: always
@@ -20,7 +20,7 @@ services:
   xyz3:
     build: .
     ports:
-      - "8004:8001"
+      - "8003:8001"
     volumes:
       - data_volume:/app/data/
     restart: always
@@ -28,7 +28,7 @@ services:
   xyz4:
     build: .
     ports:
-      - "8005:8001"
+      - "8004:8001"
     volumes:
       - data_volume:/app/data/
     restart: always
@@ -49,12 +49,11 @@ services:
       - data_volume:/app/data/
     restart: always
 
-  # And so on...
-  
 volumes:
   data_volume:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/shared/xyz2swc/
+      device: /mnt/dev-xvdb/data/xyz2swc
+

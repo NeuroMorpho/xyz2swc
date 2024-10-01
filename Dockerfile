@@ -18,9 +18,27 @@ RUN apt-get update
 
 RUN apt-get -y install libhdf5-cpp-100:i386 libhdf5-dev:i386 libhdf5-100:i386 zlib1g:i386 zlib1g-dev:i386 libsz2:i386 libc6-dev-i386 libdlib18:i386 libdlib-dev:i386 make:i386 python3-pip
 RUN apt-get -y install gcc-11 g++-11 gcc-11-multilib g++-11-multilib python3.8 python3.8-dev python3.8-distutils python3.8-venv 
+RUN apt-get -y install curl libxml2-dev gfortran liblapack-dev libblas-dev libpng-dev libgl1-mesa-dev libglu1-mesa-dev libcurl4-openssl-dev libssl-dev libgmp-dev
 RUN apt-get -y install wget
 
 #RUN apt-get -y install libssl1.1
+
+## R
+# Update package lists and install required packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gnupg \
+    dirmngr \
+    ca-certificates \
+    wget
+
+# Import the GPG key
+RUN gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
+#RUN gpg --keyserver keyserver.ubuntu.com --keyserver-options=timeout=10 --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
+RUN gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
+RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/' && apt-get update && apt-get -y install r-base
+RUN Rscript -e 'install.packages("nat", dependencies=TRUE)'
+
 
 
 WORKDIR /app
@@ -35,6 +53,7 @@ RUN ./GenerateBuildFiles_gmake2.sh
 WORKDIR /app/lib/neuronland/solution_gmake2
 RUN ln -s /usr/lib/i386-linux-gnu/hdf5/serial/libhdf5.so /usr/lib/libhdf5.so
 RUN rm /usr/bin/gcc
+RUN rm /usr/bin/g++
 RUN ln -s /usr/bin/gcc-11 /usr/bin/gcc
 RUN ln -s /usr/bin/g++-11 /usr/bin/g++
 RUN make
@@ -44,12 +63,6 @@ RUN ln -s /app/lib/neuronland/solution_gmake2/bin/x86/Debug/NeuronMorphologyForm
 WORKDIR /app
 
 
-## R
-
-RUN gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
-RUN gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
-RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/' && apt-get update && apt-get -y install r-base
-RUN Rscript -e 'install.packages("nat", dependencies=TRUE)'
 
 
 # Octave
@@ -81,7 +94,10 @@ RUN apt-get -y install openjdk-11-jdk
 COPY lib/ImageJ-linux64 /app/lib/
 COPY modules/snt/ /app/modules/snt
 
-RUN apt-get -y install nodejs npm apt-file
+RUN apt update
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+RUN apt -y install apt-file
 
 WORKDIR /app/modules/snt
 RUN wget https://downloads.imagej.net/fiji/archive/20201029-1752/fiji-linux64.zip
